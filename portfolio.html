@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="assets/images/favicon_v3.png">
+    
+    <title>Portfolio | Jorge Rafael Rodriguez</title>
+    <meta name="description" content="Proyectos destacados de Jorge Rafael Rodriguez. Desarrollo Web, Aplicaciones y Diseño UX/UI.">
+    
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Plus+Jakarta+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo" aria-label="Inicio">JR<span class="accent">.</span></a>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html#about" class="nav-link">Perfil</a></li>
+                    <li><a href="index.html#experience" class="nav-link">Trayectoria</a></li>
+                    <li><a href="index.html#skills" class="nav-link">Skills</a></li>
+                    <li><a href="index.html#education" class="nav-link">Formación</a></li>
+                    <li><a href="portfolio.html" class="nav-link active">Portfolio</a></li>
+                    <li><a href="index.html#testimonials" class="nav-link">Testimonios</a></li>
+                    <li><a href="index.html#contact" class="nav-link btn-featured">Contratar</a></li>
+                    <li>
+                        <button id="theme-toggle" class="theme-toggle" aria-label="Cambiar a modo claro">
+                            <i class="fa-solid fa-moon"></i>
+                        </button>
+                    </li>
+                </ul>
+                <button class="mobile-toggle" aria-label="Abrir menú" aria-expanded="false">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="section-padding" style="padding-top: 140px;">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Mis <span class="accent">Proyectos</span></h2>
+                    <p class="description" style="max-width: 600px; margin-top: 1rem; color: var(--text-secondary);">
+                        Una selección de trabajos y soluciones reales, donde he liderado el desarrollo, diseño y optimización de experiencias digitales.
+                    </p>
+                </div>
+
+                <!-- SECTION 1: Freelance / Design -->
+                <div class="portfolio-category">
+                    <div class="category-header">
+                        <h3><i class="fa-solid fa-pen-ruler"></i> Proyectos Freelance & Diseño</h3>
+                        <p class="category-desc">
+                            Soluciones integrales donde lideré el <strong>ciclo completo del producto</strong>. 
+                            Desde la investigación y diseño UX/UI hasta el desarrollo frontend, backend y despliegue. 
+                            En estos proyectos, asumí la responsabilidad total de la arquitectura y la experiencia de usuario.
+                        </p>
+                    </div>
+                    
+                    <div class="portfolio-grid">
+                        <!-- 0. The Rock Store -->
+                        <article class="portfolio-card reveal">
+                            <div class="portfolio-img-wrapper">
+                                <img src="assets/images/portfolio/project_rockstore.png" alt="The Rock Store" class="portfolio-img">
+                            </div>
+                            <div class="portfolio-content">
+                                <h3>The Rock Store</h3>
+                                <div class="portfolio-tech">
+                                    <span>eCommerce</span>
+                                    <span>Audio Pro</span>
+                                    <span>UX/UI</span>
+                                </div>
+                                <p class="portfolio-desc">La primera casa de música online de Argentina. Tienda de audio profesional, instrumentos y equipamiento con experiencia de compra optimizada.</p>
+                                <a href="https://therockstore.com.ar/" target="_blank" class="portfolio-link">Visitar Sitio <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                        </article>
+                        <!-- 1. Pan con Pan -->
+                        <article class="portfolio-card reveal">
+                            <div class="portfolio-img-wrapper">
+                                <img src="assets/images/portfolio/project_panconpan.png" alt="Pan con Pan" class="portfolio-img">
+                            </div>
+                            <div class="portfolio-content">
+                                <h3>Pan con Pan</h3>
+                                <div class="portfolio-tech">
+                                    <span>Web Design</span>
+                                    <span>UX/UI</span>
+                                    <span>Responsive</span>
+                                </div>
+                                <p class="portfolio-desc">Plataforma de equipamiento gastronómico. Diseño limpio orientado a la conversión y experiencia de usuario fluida.</p>
+                                <a href="https://www.panconpan.com.ar/" target="_blank" class="portfolio-link">Visitar Sitio <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                        </article>
+
+                        <!-- 2. Mercado Fitness -->
+                        <article class="portfolio-card reveal">
+                            <div class="portfolio-img-wrapper">
+                                <img src="assets/images/portfolio/project_mercadofitness.png" alt="Mercado Fitness" class="portfolio-img">
+                            </div>
+                            <div class="portfolio-content">
+                                <h3>Mercado Fitness</h3>
+                                <div class="portfolio-tech">
+                                    <span>Portal de Noticias</span>
+                                    <span>CMS</span>
+                                    <span>Comunidad</span>
+                                </div>
+                                <p class="portfolio-desc">Comunidad líder de negocios y capacitación para la industria del fitness en Hispanoamérica.</p>
+                                <a href="https://mercadofitness.com/" target="_blank" class="portfolio-link">Visitar Sitio <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                        </article>
+
+                        <!-- 3. Polotop -->
+                        <article class="portfolio-card reveal">
+                            <div class="portfolio-img-wrapper">
+                                <img src="assets/images/portfolio/project_polotop.png" alt="Polotop" class="portfolio-img">
+                            </div>
+                            <div class="portfolio-content">
+                                <h3>Polotop</h3>
+                                <div class="portfolio-tech">
+                                    <span>E-commerce</span>
+                                    <span>Branding</span>
+                                    <span>Web Design</span>
+                                </div>
+                                <p class="portfolio-desc">Sitio de indumentaria deportiva con enfoque en la experiencia de compra visual y moderna.</p>
+                                <a href="https://polotop.com/" target="_blank" class="portfolio-link">Visitar Sitio <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                        </article>
+
+                        <!-- 4. IADPI -->
+                        <article class="portfolio-card reveal">
+                            <div class="portfolio-img-wrapper">
+                                <img src="assets/images/portfolio/project_iadpi.png" alt="IADPI" class="portfolio-img">
+                            </div>
+                            <div class="portfolio-content">
+                                <h3>IADPI</h3>
+                                <div class="portfolio-tech">
+                                    <span>Institucional</span>
+                                    <span>Accesibilidad</span>
+                                    <span>Frontend</span>
+                                </div>
+                                <p class="portfolio-desc">Instituto Argentino de Derecho Procesal Informático. Portal institucional moderno y accesible.</p>
+                                <a href="https://iadpi.com.ar/" target="_blank" class="portfolio-link">Visitar Sitio <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                        </article>
+
+                        <!-- 5. Egraphics -->
+                        <article class="portfolio-card reveal">
+                            <div class="portfolio-img-wrapper">
+                                <img src="assets/images/portfolio/project_egraphics.png" alt="Egraphics" class="portfolio-img">
+                            </div>
+                            <div class="portfolio-content">
+                                <h3>Egraphics</h3>
+                                <div class="portfolio-tech">
+                                    <span>Corporate</span>
+                                    <span>UX Design</span>
+                                    <span>Animation</span>
+                                </div>
+                                <p class="portfolio-desc">Sitio corporativo con fuerte identidad visual, animaciones y presentación de servicios.</p>
+                                <a href="https://egraphics.com.ar/" target="_blank" class="portfolio-link">Visitar Sitio <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="separator-line"></div>
+
+                <!-- SECTION 2: Corporate / Enterprise -->
+                <div class="portfolio-category">
+                    <div class="category-header">
+                        <h3><i class="fa-solid fa-building"></i> Experiencia Corporativa & Enterprise</h3>
+                        <p class="category-desc">
+                            Desarrollo de alto impacto en <strong>entornos corporativos y gubernamentales</strong>. 
+                            Participación en equipos ágiles multidisciplinarios, implementando arquitecturas escalables, 
+                            optimizando performance para alto tráfico y cumpliendo estándares de seguridad y accesibilidad (WCAG).
+                        </p>
+                    </div>
+
+                    <div class="portfolio-grid">
+                        <!-- 0. Tienda Coca-Cola (Wabi) -->
+                        <article class="portfolio-card reveal">
+                            <div class="portfolio-img-wrapper">
+                                <img src="assets/images/portfolio/project_cocacola.png" alt="Tienda Coca-Cola" class="portfolio-img">
+                            </div>
+                            <div class="portfolio-content">
+                                <h3>Tienda Coca-Cola</h3>
+                                <div class="portfolio-tech">
+                                    <span>eCommerce</span>
+                                    <span>Management</span>
+                                    <span>Wabi</span>
+                                </div>
+                                <p class="portfolio-desc">Frontend eCommerce Manager en Wabi Project. Desarrollo y gestión de la tienda oficial de Coca Cola para Argentina.</p>
+                                <a href="https://tienda.coca-cola.com.ar/" target="_blank" class="portfolio-link">Visitar Sitio <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                        </article>
+                        <!-- 6. TN -->
+                        <article class="portfolio-card reveal">
+                            <div class="portfolio-img-wrapper">
+                                <img src="assets/images/portfolio/project_tn.png" alt="Todo Noticias" class="portfolio-img">
+                            </div>
+                            <div class="portfolio-content">
+                                <h3>Todo Noticias (TN)</h3>
+                                <div class="portfolio-tech">
+                                    <span>High Traffic</span>
+                                    <span>Drupal</span>
+                                    <span>Video Player</span>
+                                </div>
+                                <p class="portfolio-desc">Uno de los medios de noticias más visitados de Argentina. Optimización de performance extremo.</p>
+                                <a href="https://tn.com.ar/" target="_blank" class="portfolio-link">Visitar Sitio <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                        </article>
+
+                        <!-- 7. El Trece -->
+                        <article class="portfolio-card reveal">
+                            <div class="portfolio-img-wrapper">
+                                <img src="assets/images/portfolio/project_eltrece.png" alt="El Trece TV" class="portfolio-img">
+                            </div>
+                            <div class="portfolio-content">
+                                <h3>El Trece TV</h3>
+                                <div class="portfolio-tech">
+                                    <span>Streaming</span>
+                                    <span>Multimedia</span>
+                                    <span>JavaScript</span>
+                                </div>
+                                <p class="portfolio-desc">Plataforma de entretenimiento y streaming en vivo del canal líder de televisión abierta.</p>
+                                <a href="https://www.eltrecetv.com.ar/" target="_blank" class="portfolio-link">Visitar Sitio <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                        </article>
+
+                        <!-- 8. Cienradios -->
+                        <article class="portfolio-card reveal">
+                            <div class="portfolio-img-wrapper">
+                                <img src="assets/images/portfolio/project_cienradios.png" alt="Cienradios" class="portfolio-img">
+                            </div>
+                            <div class="portfolio-content">
+                                <h3>Cienradios</h3>
+                                <div class="portfolio-tech">
+                                    <span>Audio Streaming</span>
+                                    <span>Web App</span>
+                                    <span>React/JS</span>
+                                </div>
+                                <p class="portfolio-desc">La red de radios online más grande de Argentina. Integración de players de audio complejos.</p>
+                                <a href="https://ar.cienradios.com/" target="_blank" class="portfolio-link">Visitar Sitio <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                        </article>
+
+                        <!-- 9. Seguridad GBA -->
+                        <article class="portfolio-card reveal">
+                            <div class="portfolio-img-wrapper">
+                                <img src="assets/images/portfolio/project_seguridadgba.png" alt="Seguridad GBA" class="portfolio-img">
+                            </div>
+                            <div class="portfolio-content">
+                                <h3>Seguridad GBA</h3>
+                                <div class="portfolio-tech">
+                                    <span>Angular</span>
+                                    <span>Ionic</span>
+                                    <span>GovAdmin</span>
+                                </div>
+                                <p class="portfolio-desc">Aplicación web progresiva (PWA) para denuncias y gestión de seguridad ciudadana.</p>
+                                <a href="https://seguridad.gba.gob.ar/#/home" target="_blank" class="portfolio-link">Visitar Sitio <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                        </article>
+
+                        <!-- 10. Poncho -->
+                        <article class="portfolio-card reveal">
+                            <div class="portfolio-img-wrapper">
+                                <img src="assets/images/portfolio/project_poncho.png" alt="Poncho Design System" class="portfolio-img">
+                            </div>
+                            <div class="portfolio-content">
+                                <h3>Poncho</h3>
+                                <div class="portfolio-tech">
+                                    <span>Design System</span>
+                                    <span>Bootstrap</span>
+                                    <span>A11y (WCAG)</span>
+                                </div>
+                                <p class="portfolio-desc">Sistema de diseño estandarizado para la Administración Pública Nacional de Argentina.</p>
+                                <a href="https://argob.github.io/poncho/" target="_blank" class="portfolio-link">Visitar Sitio <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-links">
+                <a href="https://linkedin.com/in/angular-frontend/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="mailto:jorgerr76@hotmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+            <p>&copy; <span id="year"></span> Jorge Rafael Rodriguez. Senior Frontend Developer.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
