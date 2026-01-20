@@ -15,10 +15,8 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.classList.remove('light-mode');
         themeIcon.className = 'fa-solid fa-sun';
         themeToggleBtn.setAttribute('aria-label', 'Cambiar a modo claro');
-    } else if (!prefersDarkScheme.matches) {
-        document.body.classList.add('light-mode');
-        themeIcon.className = 'fa-solid fa-moon';
     }
+    // Default is now Dark Mode (no else block needed as CSS is dark by default)
 
     themeToggleBtn.addEventListener('click', () => {
         document.body.classList.toggle('light-mode');
