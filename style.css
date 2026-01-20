@@ -798,6 +798,54 @@ footer {
     border-color: var(--accent);
 }
 
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: var(--accent);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: 0 4px 15px var(--accent-glow);
+    transition: all 0.3s cubic-bezier(0.5, 0, 0, 1);
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.back-to-top:hover {
+    background: var(--text-primary);
+    color: var(--bg-dark);
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(56, 189, 248, 0.4);
+}
+
+/* Mobile Adjustment for Back to Top */
+@media (max-width: 768px) {
+    .back-to-top {
+        bottom: 20px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
+    }
+}
+
+
 .testimonial-card .quote-icon {
     font-size: 1.5rem;
     color: var(--accent);
