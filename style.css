@@ -21,7 +21,7 @@ body.light-mode {
     --bg-dark: #f8fafc; /* Slate 50 */
     --bg-card: #ffffff;
     --text-primary: #1e293b; /* Slate 800 */
-    --text-secondary: #64748b; /* Slate 500 */
+    --text-secondary: #475569; /* Slate 600 - Darker for better contrast */
     --accent: #0284c7; /* Sky 600 - darker for contrast on white */
     --accent-glow: rgba(2, 132, 199, 0.15);
 }
@@ -70,10 +70,15 @@ body.light-mode .btn-secondary:hover {
 body.light-mode .about-card,
 body.light-mode .timeline-item, 
 body.light-mode .skill-category,
-body.light-mode .edu-card,
-body.light-mode .contact-form {
+body.light-mode .edu-card {
     border-color: rgba(0,0,0,0.1);
     box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+body.light-mode .contact-form {
+    background: #ffffff;
+    border: 1px solid rgba(0,0,0,0.1);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
 }
 
 body.light-mode .timeline-item {
@@ -98,7 +103,7 @@ body.light-mode .timeline {
 
 body.light-mode .form-group input, 
 body.light-mode .form-group textarea {
-    background: #ffffff;
+    background: #f1f5f9; /* Slate 100 - Visible input background */
     border-color: rgba(0, 0, 0, 0.1);
     color: var(--text-primary);
 }
@@ -716,8 +721,8 @@ footer {
     .hero h1 { font-size: 2.5rem; }
     .hero .subtitle { font-size: 1rem; }
     
-    .timeline { left: 0; padding-left: 20px; }
-    .timeline-dot { left: -9px; }
+    .timeline { left: 0; padding-left: 35px; }
+    .timeline-dot { left: -44px; }
     
     .section-padding { padding: 60px 0; }
 }

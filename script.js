@@ -31,6 +31,14 @@ document.addEventListener('DOMContentLoaded', () => {
             themeToggleBtn.setAttribute('aria-label', 'Cambiar a modo claro');
         }
         localStorage.setItem('theme', theme);
+
+        // Close mobile menu if open
+        const nav = document.querySelector('.nav');
+        const mobileToggle = document.querySelector('.mobile-toggle');
+        if (nav.classList.contains('nav-open')) {
+            nav.classList.remove('nav-open');
+            mobileToggle.setAttribute('aria-expanded', 'false');
+        }
     });
 
     // === Carousel Logic (Multi-Instance) ===
