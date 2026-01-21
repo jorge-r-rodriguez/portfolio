@@ -405,6 +405,57 @@ body.light-mode .theme-toggle:hover {
     display: grid;
     grid-template-columns: 1fr;
     gap: 40px;
+    align-items: center;
+}
+
+@media (min-width: 900px) {
+    .about-grid {
+        grid-template-columns: 350px 1fr;
+    }
+}
+
+.about-image-wrapper {
+    position: relative;
+    border-radius: var(--border-radius);
+    overflow: visible; 
+    
+    /* Constraint width to prevent huge images */
+    width: 100%;
+    max-width: 400px; /* Safe max width for mobile/desktop */
+    margin: 0 auto; /* Center on mobile */
+}
+
+@media (min-width: 900px) {
+    .about-image-wrapper {
+        margin: 0; /* Reset centering on desktop */
+    }
+}
+
+/* Base image style */
+.profile-img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+    object-fit: cover;
+    display: block; /* Remove bottom space */
+    
+    /* The Diffuse Effect: Fade out bottom to blend with background */
+    mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+    
+    /* Subtle filter to blend tint */
+    filter: brightness(0.95);
+    transition: var(--transition);
+}
+
+.profile-img:hover {
+    filter: brightness(1.05);
+}
+
+/* Light Mode adjustments */
+body.light-mode .profile-img {
+    /* Maybe slightly different mix for light mode? */
+    filter: brightness(1);
 }
 
 .about-card {
@@ -885,12 +936,7 @@ body.light-mode .testimonial-author h4 {
 
 
 /* === About Section Premium Card === */
-.about-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    max-width: 900px;
-    margin: 0 auto;
-}
+/* === About Section Premium Card === */
 
 .about-card {
     background: #1e293b; /* Dark slate blue/grey matching the image */
