@@ -1,0 +1,34 @@
+# Robots.txt - Control de indexación de buscadores
+# https://jorge-rodriguez-portfolio.com/robots.txt
+
+User-agent: *
+Allow: /
+
+# Bloquear indexación de imágenes de perfil
+User-agent: Googlebot-Image
+Disallow: /assets/images/profile_jorge.png
+
+User-agent: *
+Disallow: /assets/images/profile_jorge.png
+
+# Bloquear todos los bots de imágenes
+User-agent: Googlebot-Image
+Disallow: /assets/images/profile_jorge.png
+
+User-agent: Bingbot
+Disallow: /assets/images/profile_jorge.png
+
+User-agent: Slurp
+Disallow: /assets/images/profile_jorge.png
+
+User-agent: DuckDuckBot
+Disallow: /assets/images/profile_jorge.png
+
+User-agent: Baiduspider
+Disallow: /assets/images/profile_jorge.png
+
+User-agent: YandexBot
+Disallow: /assets/images/profile_jorge.png
+
+# Sitemap
+Sitemap: https://jorge-rodriguez-portfolio.com/sitemap.xml
