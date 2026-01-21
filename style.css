@@ -401,69 +401,79 @@ body.light-mode .theme-toggle:hover {
 }
 
 /* About Section */
-.about-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 40px;
-    align-items: center;
-}
-
-@media (min-width: 900px) {
-    .about-grid {
-        grid-template-columns: 350px 1fr;
-    }
-}
-
-.about-image-wrapper {
-    position: relative;
-    border-radius: var(--border-radius);
-    overflow: visible; 
-    
-    /* Constraint width to prevent huge images */
-    width: 100%;
-    max-width: 400px; /* Safe max width for mobile/desktop */
-    margin: 0 auto; /* Center on mobile */
-}
-
-@media (min-width: 900px) {
-    .about-image-wrapper {
-        margin: 0; /* Reset centering on desktop */
-    }
-}
-
-/* Base image style */
-.profile-img {
-    width: 100%;
-    height: auto;
-    border-radius: var(--border-radius);
-    object-fit: cover;
-    display: block; /* Remove bottom space */
-    
-    /* The Diffuse Effect: Fade out bottom to blend with background */
-    mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
-    -webkit-mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
-    
-    /* Subtle filter to blend tint */
-    filter: brightness(0.95);
-    transition: var(--transition);
-}
-
-.profile-img:hover {
-    filter: brightness(1.05);
-}
-
-/* Light Mode adjustments */
-body.light-mode .profile-img {
-    /* Maybe slightly different mix for light mode? */
-    filter: brightness(1);
+.about-content {
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 .about-card {
+    position: relative;
     background: var(--bg-card);
     padding: 40px;
     border-radius: var(--border-radius);
     border: 1px solid rgba(255, 255, 255, 0.05);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Profile Thumbnail - Circular, top-right positioned */
+.profile-thumbnail {
+    /* Default: centered for mobile/tablet */
+    display: block;
+    margin: 0 auto 24px auto;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center 20%; /* Adjust to show face properly */
+    border: 2px solid var(--bg-dark);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3), 
+                0 0 0 1px rgba(56, 189, 248, 0.2);
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.profile-thumbnail:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4), 
+                0 0 0 2px var(--accent);
+}
+
+/* Light mode adjustments */
+body.light-mode .profile-thumbnail {
+    border-color: #ffffff;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15), 
+                0 0 0 1px rgba(56, 189, 248, 0.3);
+}
+
+body.light-mode .profile-thumbnail:hover {
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2), 
+                0 0 0 2px var(--accent);
+}
+
+/* Large screens only - floating thumbnail in top-right */
+@media (min-width: 1100px) {
+    .profile-thumbnail {
+        position: relative;
+        float: right;
+        top: 0;
+        right: 0;
+        width: 200px;
+        height: 200px;
+        margin: 0; /* Reset mobile centering */
+    }
+    
+    .about-card {
+        padding-right: 220px; /* Make room for thumbnail */
+        min-height: 220px; /* Ensure card is tall enough */
+    }
+}
+
+/* Medium to small screens - keep vertical layout */
+@media (max-width: 1099px) {
+    .about-card {
+        padding: 32px 24px;
+        text-align: left;
+    }
 }
 
 /* Experience Timeline */
