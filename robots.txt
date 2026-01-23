@@ -30,4 +30,4 @@ User-agent: YandexBot
 Disallow: /assets/images/foto-perfil.jpg
 
 # Sitemap
-# Sitemap: https://jorge-rodriguez-portfolio.com/sitemap.xml
+# Sitemap: https://jorgerodriguez.es/sitemap.xml
