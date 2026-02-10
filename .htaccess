@@ -1,0 +1,10 @@
+RewriteEngine On
+
+# Force HTTPS and a single canonical host (non-www).
+RewriteCond %{HTTPS} !=on [OR]
+RewriteCond %{HTTP_HOST} ^www\.jorgerodriguez\.es$ [NC]
+RewriteRule ^ https://jorgerodriguez.es%{REQUEST_URI} [R=301,L]
+
+# Consolidate /index.html into the home URL.
+RewriteCond %{THE_REQUEST} \s/+index\.html[\s?] [NC]
+RewriteRule ^index\.html$ https://jorgerodriguez.es/ [R=301,L]

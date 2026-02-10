@@ -9,15 +9,16 @@
     <!-- SEO Meta Tags -->
     <title>Jorge Rafael Rodriguez | Senior Frontend Developer Angular & UX/UI Specialist</title>
     <meta name="description"
-        content="Portfolio de Jorge Rafael Rodriguez. Senior Frontend Developer con +15 años de experiencia liderando proyectos digitales en Angular, Ionic y UX/UI para BBVA, Imatia y Coca-Cola Company.">
+        content="Portfolio de Jorge Rafael Rodriguez. Senior Frontend Developer con +15 años de experiencia liderando proyectos digitales en Angular, Ionic y UX/UI para ICBC, Imatia y Coca-Cola Company.">
     <meta name="keywords"
         content="Frontend Developer, Angular Expert, UX/UI Design, Ionic, TypeScript, Accesibilidad Web, WCAG, Senior Developer, Vigo, España">
     <meta name="author" content="Jorge Rafael Rodriguez">
     <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://jorgerodriguez.es/">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="profile">
-    <meta property="og:url" content="https://jorgerodriguez.es">
+    <meta property="og:url" content="https://jorgerodriguez.es/">
     <meta property="og:title" content="Jorge Rafael Rodriguez | Senior Frontend Developer & UX/UI">
     <meta property="og:description"
         content="Especialista en desarrollo frontend y diseño de interfaces con más de 15 años de experiencia. Transformo ideas complejas en experiencias digitales fluidas.">
@@ -36,7 +37,7 @@
       "@type": "Person",
       "name": "Jorge Rafael Rodriguez",
       "jobTitle": "Senior Frontend Developer & UX/UI Specialist",
-      "url": "https://jorgerodriguez.es",
+      "url": "https://jorgerodriguez.es/",
       "sameAs": [
         "https://www.linkedin.com/in/angular-frontend/"
       ],
@@ -108,7 +109,7 @@
                 </p>
                 <div class="cta-group slide-up delay-3">
                     <a href="#contact" class="btn btn-primary">Agendar Reunión</a>
-                    <a href="#experience" class="btn btn-secondary">Explorar Experiencia</a>
+                    <a href="portfolio.html" class="btn btn-secondary">Explorar Proyectos</a>
                 </div>
             </div>
             <div class="hero-background">
@@ -532,21 +533,23 @@
                         </div>
                     </div>
 
-                    <form class="contact-form">
+                    <form id="contact-form" class="contact-form" action="enviar-contacto.php" method="POST">
                         <div class="form-group">
                             <label for="name">Nombre Completo</label>
-                            <input type="text" id="name" required placeholder="Ej. Juan Pérez">
+                            <input type="text" id="name" name="name" required placeholder="Ej. Juan Pérez">
                         </div>
                         <div class="form-group">
                             <label for="email">Correo Electrónico</label>
-                            <input type="email" id="email" required placeholder="juan@empresa.com">
+                            <input type="email" id="email" name="email" required placeholder="juan@empresa.com">
                         </div>
                         <div class="form-group">
                             <label for="message">Detalles del Proyecto</label>
-                            <textarea id="message" rows="5" required
+                            <textarea id="message" name="message" rows="5" required
                                 placeholder="¿Qué buscas construir o mejorar?"></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary full-width">Enviar Solicitud</button>
+                        <button type="submit" id="submit-btn" class="btn btn-primary full-width">Enviar
+                            Solicitud</button>
+                        <div id="form-message" class="form-message hidden"></div>
                     </form>
                 </div>
             </div>
@@ -569,6 +572,32 @@
                 reservados.</p>
         </div>
     </footer>
+
+    <div id="cookie-banner" class="cookie-banner" role="dialog" aria-live="polite" aria-label="Aviso de cookies"
+        aria-hidden="true" hidden>
+        <div class="cookie-content">
+            <div class="cookie-text">
+                <h2>Control de cookies</h2>
+                <p>
+                    Este sitio web utiliza cookies propias y de terceros, concretamente de Google Analytics, para
+                    analizar la navegación interna, medir el volumen de visitas y mejorar la experiencia del usuario.
+                    Puedes aceptar o rechazar las cookies no esenciales.
+                </p>
+            </div>
+            <div class="cookie-actions">
+                <button class="btn btn-secondary" type="button" data-cookie-action="decline">Rechazar</button>
+                <button class="btn btn-primary" type="button" data-cookie-action="accept">Aceptar</button>
+            </div>
+        </div>
+        <details class="cookie-details">
+            <summary>Ver detalles</summary>
+            <ul>
+                <li><strong>Necesarias:</strong> permiten el funcionamiento básico del sitio.</li>
+                <li><strong>Preferencias:</strong> guardan tu elección de tema y consentimiento.</li>
+                <li><strong>Terceros:</strong> recursos externos (fuentes e iconos) pueden aplicar sus políticas.</li>
+            </ul>
+        </details>
+    </div>
 
     <script src="script.js"></script>
 </body>

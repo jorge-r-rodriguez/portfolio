@@ -1,33 +1,8 @@
-# Robots.txt - Control de indexación de buscadores
-
+# Robots.txt
 User-agent: *
 Allow: /
-
-# Bloquear indexación de imágenes de perfil
-User-agent: Googlebot-Image
+Disallow: /default.php
+Disallow: /enviar-contacto.php
 Disallow: /assets/images/foto-perfil.jpg
 
-User-agent: *
-Disallow: /assets/images/foto-perfil.jpg
-
-# Bloquear todos los bots de imágenes
-User-agent: Googlebot-Image
-Disallow: /assets/images/foto-perfil.jpg
-
-User-agent: Bingbot
-Disallow: /assets/images/foto-perfil.jpg
-
-User-agent: Slurp
-Disallow: /assets/images/foto-perfil.jpg
-
-User-agent: DuckDuckBot
-Disallow: /assets/images/foto-perfil.jpg
-
-User-agent: Baiduspider
-Disallow: /assets/images/foto-perfil.jpg
-
-User-agent: YandexBot
-Disallow: /assets/images/foto-perfil.jpg
-
-# Sitemap
-# Sitemap: https://jorgerodriguez.es/sitemap.xml
+Sitemap: https://jorgerodriguez.es/sitemap.xml
