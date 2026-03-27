@@ -782,6 +782,12 @@ footer {
 }
 
 @media (max-width: 768px) {
+    .header {
+        background: rgba(15, 23, 42, 0.97);
+        -webkit-backdrop-filter: none;
+        backdrop-filter: none;
+    }
+
     .nav-list {
         display: none;
     }
@@ -802,8 +808,41 @@ footer {
         box-shadow: 0 10px 30px rgba(0,0,0,0.5);
     }
 
+    .hero {
+        min-height: auto;
+        padding-bottom: 56px;
+    }
+
+    .hero-background,
+    .glow {
+        display: none;
+    }
+
     .hero h1 { font-size: 2.5rem; }
     .hero .subtitle { font-size: 1rem; }
+
+    .slide-up,
+    .reveal,
+    .reveal.active {
+        opacity: 1;
+        transform: none;
+        animation: none;
+        transition: none;
+    }
+
+    .about-card,
+    .timeline-item,
+    .portfolio-card,
+    .contact-form,
+    .cookie-banner {
+        box-shadow: none;
+    }
+
+    .profile-thumbnail {
+        width: 160px;
+        height: 160px;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.22);
+    }
     
     .timeline { left: 0; padding-left: 35px; }
     .timeline-dot { left: -44px; }
@@ -1121,6 +1160,21 @@ body.light-mode .separator-line {
 
 .portfolio-card:hover .portfolio-img {
     transform: scale(1.05);
+}
+
+@media (hover: none) and (pointer: coarse) {
+    .portfolio-card:hover,
+    .about-card:hover,
+    .profile-thumbnail:hover,
+    .back-to-top:hover,
+    .footer-links a:hover {
+        transform: none;
+        box-shadow: inherit;
+    }
+
+    .portfolio-card:hover .portfolio-img {
+        transform: none;
+    }
 }
 
 .portfolio-content {

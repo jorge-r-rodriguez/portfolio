@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const themeToggleBtn = document.getElementById('theme-toggle');
     const themeIcon = themeToggleBtn ? themeToggleBtn.querySelector('i') : null;
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const isMobileViewport = window.matchMedia('(max-width: 768px)').matches;
 
     const scheduleIdle = (callback) => {
         if ('requestIdleCallback' in window) {
@@ -237,7 +238,7 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        if (prefersReducedMotion || !('IntersectionObserver' in window)) {
+        if (prefersReducedMotion || isMobileViewport || !('IntersectionObserver' in window)) {
             revealElements.forEach((element) => element.classList.add('active'));
             return;
         }
@@ -278,12 +279,14 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         if (!savedConsent) {
-            cookieBanner.hidden = false;
-            cookieBanner.setAttribute('aria-hidden', 'false');
+            window.setTimeout(() => {
+                cookieBanner.hidden = false;
+                cookieBanner.setAttribute('aria-hidden', 'false');
 
-            window.requestAnimationFrame(() => {
-                cookieBanner.classList.add('is-visible');
-            });
+                window.requestAnimationFrame(() => {
+                    cookieBanner.classList.add('is-visible');
+                });
+            }, isMobileViewport ? 1400 : 300);
         }
 
         const storeConsent = (value) => {
