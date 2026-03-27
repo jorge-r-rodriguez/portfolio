@@ -59,14 +59,23 @@
     <!-- Fonts & Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Plus+Jakarta+Sans:wght@300;400;500;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&family=Plus+Jakarta+Sans:wght@400;500;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
+    <script>
+        try {
+            if (localStorage.getItem('theme') === 'light') {
+                document.body.classList.add('light-mode');
+            }
+        } catch (error) {
+        }
+    </script>
     <div class="scroll-progress"></div>
 
     <header class="header">
@@ -83,7 +92,7 @@
                     <li><a href="#contact" class="nav-link btn-featured">Contactar</a></li>
                     <li>
                         <button id="theme-toggle" class="theme-toggle" aria-label="Cambiar a modo claro">
-                            <i class="fa-solid fa-moon"></i>
+                            <i class="fa-solid fa-sun"></i>
                         </button>
                     </li>
                 </ul>
@@ -100,8 +109,8 @@
         <!-- Hero Section -->
         <section id="hero" class="hero">
             <div class="container hero-content">
-                <span class="subtitle slide-up">Hola, soy Jorge Rafael Rodriguez</span>
-                <h1 class="slide-up delay-1">Frontend Architect <br><span class="text-gradient">Angular & UX/UI</span>
+                <span class="subtitle slide-up">Hola, soy Jorge Rodriguez</span>
+                <h1 class="slide-up delay-1">Desarrollador Frontend <br><span class="text-gradient">Angular & UX/UI</span>
                 </h1>
                 <p class="description slide-up delay-2">
                     Ayudo a empresas a construir productos digitales escalables y accesibles.
@@ -127,7 +136,7 @@
                 <div class="about-content reveal">
                     <div class="about-card">
                         <img src="assets/images/foto-perfil.jpg" alt="Jorge Rafael Rodriguez" class="profile-thumbnail"
-                            data-noindex="true" loading="lazy">
+                            data-noindex="true" loading="lazy" decoding="async" width="200" height="200">
                         <h3><i class="fa-solid fa-rocket"></i> Arquitectura Frontend de Alto Impacto</h3>
                         <p>
                             Más que escribir código, construyo <strong>soluciones digitales escalables</strong> que
@@ -160,7 +169,7 @@
                         <div class="timeline-content">
                             <h3>Senior Frontend Developer (Angular & Ionic)</h3>
                             <h4>Imatia Innovation</h4>
-                            <p>Lidero el desarrollo de <strong>Social TV</strong>, una plataforma crítica para combatir
+                            <p>Desarrollo de <strong>Social TV</strong>, una plataforma crítica para combatir
                                 la soledad en adultos mayores.</p>
                             <ul>
                                 <li>Optimización radical de UX/UI y cumplimiento de estándares de accesibilidad para
@@ -599,7 +608,7 @@
         </details>
     </div>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 
 </html>

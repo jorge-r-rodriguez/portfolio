@@ -13,7 +13,7 @@
     
     --nav-height: 80px;
     --border-radius: 12px;
-    --transition: all 0.3s ease;
+    --transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
 }
 
 /* Light Mode Overrides */
@@ -124,6 +124,9 @@ body.light-mode .btn-featured:hover {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html {
     scroll-behavior: smooth;
 }
 
@@ -159,6 +162,8 @@ a {
 
 img {
     max-width: 100%;
+    display: block;
+    height: auto;
 }
 
 .container {
@@ -169,6 +174,18 @@ img {
 
 .section-padding {
     padding: 100px 0;
+}
+
+.about,
+.experience,
+.skills,
+.education,
+.testimonials,
+.contact,
+.portfolio-category,
+footer {
+    content-visibility: auto;
+    contain-intrinsic-size: 1px 700px;
 }
 
 .accent {
@@ -190,9 +207,15 @@ img {
     width: 100%;
     height: var(--nav-height);
     background: rgba(15, 23, 42, 0.9);
-    backdrop-filter: blur(12px);
     z-index: 1000;
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+@supports ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
+    .header {
+        -webkit-backdrop-filter: blur(8px);
+        backdrop-filter: blur(8px);
+    }
 }
 
 .nav-container {
@@ -302,7 +325,7 @@ body.light-mode .theme-toggle:hover {
 }
 
 .hero h1 {
-    font-size: 4.5rem;
+    font-size: 4.2rem;
     line-height: 1.1;
     margin-bottom: 1.5rem;
 }
@@ -369,8 +392,8 @@ body.light-mode .theme-toggle:hover {
 .glow {
     position: absolute;
     border-radius: 50%;
-    filter: blur(100px);
-    opacity: 0.15;
+    filter: blur(72px);
+    opacity: 0.12;
 }
 
 .glow-1 {
@@ -723,7 +746,7 @@ footer {
 .reveal {
     opacity: 0;
     transform: translateY(30px);
-    transition: all 0.6s cubic-bezier(0.5, 0, 0, 1);
+    transition: opacity 0.6s cubic-bezier(0.5, 0, 0, 1), transform 0.6s cubic-bezier(0.5, 0, 0, 1);
 }
 
 .reveal.active {
@@ -1067,7 +1090,7 @@ body.light-mode .separator-line {
     border-radius: 16px;
     overflow: hidden;
     border: 1px solid rgba(255, 255, 255, 0.05);
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -1247,12 +1270,18 @@ body.light-mode .portfolio-card:hover {
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 16px;
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
-    backdrop-filter: blur(14px);
     z-index: 2000;
     padding: 20px 24px;
     opacity: 0;
     transform: translateY(16px);
     transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+@supports ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
+    .cookie-banner {
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+    }
 }
 
 .cookie-banner.is-visible {
@@ -1355,6 +1384,27 @@ body.light-mode .cookie-details summary {
 }
 
 @media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+    .reveal,
+    .reveal.active,
+    .slide-up {
+        opacity: 1;
+        transform: none;
+        animation: none;
+    }
+
     .cookie-banner {
         transition: none;
         transform: none;
