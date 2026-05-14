@@ -74,10 +74,8 @@
     <!-- Fonts & Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
     <link rel="dns-prefetch" href="//fonts.googleapis.com" />
     <link rel="dns-prefetch" href="//fonts.gstatic.com" />
-    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com" />
     <link
       rel="preload"
       href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&family=Plus+Jakarta+Sans:wght@400;500;700&display=swap"
@@ -89,26 +87,11 @@
       media="print"
       onload="this.media = 'all'"
     />
-    <link rel="stylesheet" href="style.css?v=20260514" />
-    <link
-      rel="preload"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-      as="style"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-      media="print"
-      onload="this.media = 'all'"
-    />
+    <link rel="stylesheet" href="style.min.css?v=20260514" />
     <noscript>
       <link
         href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&family=Plus+Jakarta+Sans:wght@400;500;700&display=swap"
         rel="stylesheet"
-      />
-      <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
       />
     </noscript>
   </head>
@@ -123,7 +106,7 @@
     </script>
     <header class="header">
       <div class="container nav-container">
-        <a href="#hero" class="logo" aria-label="Inicio"
+        <a href="#hero" class="logo" aria-label="JR. Inicio"
           >JR<span class="accent">.</span></a
         >
         <nav class="nav">
@@ -144,7 +127,7 @@
                 class="theme-toggle"
                 aria-label="Cambiar a modo claro"
               >
-                <i class="fa-solid fa-sun"></i>
+                <span class="icon icon-sun" aria-hidden="true"></span>
               </button>
             </li>
           </ul>
@@ -197,19 +180,22 @@
           </div>
           <div class="about-content reveal">
             <div class="about-card">
-              <img
-                src="assets/images/foto-perfil.jpg"
-                alt="Jorge Rafael Rodríguez - Consultor en marketing turístico digital, UX/UI y automatización con IA"
-                class="profile-thumbnail"
-                data-noindex="true"
-                loading="lazy"
-                decoding="async"
-                width="200"
-                height="200"
-              />
+              <picture>
+                <source srcset="assets/images/foto-perfil-240.webp" type="image/webp" />
+                <img
+                  src="assets/images/foto-perfil.jpg"
+                  alt="Jorge Rafael Rodríguez - Consultor en marketing turístico digital, UX/UI y automatización con IA"
+                  class="profile-thumbnail"
+                  data-noindex="true"
+                  loading="lazy"
+                  decoding="async"
+                  width="200"
+                  height="200"
+                />
+              </picture>
 
               <h3>
-                <!-- <i class="fa-solid fa-route"></i> -->
+                <!-- <span class="icon icon-location" aria-hidden="true"></span> -->
                 Perfil especializado en crecimiento digital y automatización
                 inteligente
               </h3>
@@ -251,8 +237,10 @@
 
           <div class="ai-solutions-grid">
             <article class="ai-card reveal">
-              <i class="fa-solid fa-magnifying-glass-chart"></i>
-              <h3>Consultoría y diagnóstico digital</h3>
+              <div class="ai-card-heading">
+                <span class="icon icon-search-chart" aria-hidden="true"></span>
+                <h3>Consultoría y diagnóstico digital</h3>
+              </div>
               <p>
                 Análisis de web, experiencia de usuario, SEO local, Google
                 Business, canales de captación, reputación online y puntos de
@@ -261,8 +249,10 @@
             </article>
 
             <article class="ai-card reveal">
-              <i class="fa-solid fa-bullhorn"></i>
-              <h3>Gestión de captación y conversión</h3>
+              <div class="ai-card-heading">
+                <span class="icon icon-bullhorn" aria-hidden="true"></span>
+                <h3>Gestión de captación y conversión</h3>
+              </div>
               <p>
                 Landing pages, formularios, campañas, contenidos, medición,
                 email marketing y flujos para recuperar interesados en rutas,
@@ -271,8 +261,10 @@
             </article>
 
             <article class="ai-card reveal">
-              <i class="fa-solid fa-headset"></i>
-              <h3>Asistentes IA y automatización operativa</h3>
+              <div class="ai-card-heading">
+                <span class="icon icon-headset" aria-hidden="true"></span>
+                <h3>Asistentes IA y automatización operativa</h3>
+              </div>
               <p>
                 Asistentes 24/7 para preguntas frecuentes, reservas,
                 disponibilidad y precios, conectados a formularios, CRM, email o
@@ -508,13 +500,13 @@
           </div>
           <div class="carousel-container">
             <button class="carousel-btn prev" aria-label="Anterior">
-              <i class="fa-solid fa-chevron-left"></i>
+              <span class="icon icon-chevron-left" aria-hidden="true"></span>
             </button>
 
             <div class="carousel-slider">
               <div class="skill-category carousel-item reveal">
                 <h3>
-                  <i class="fa-solid fa-chart-line"></i> Estrategia Digital
+                  <span class="icon icon-chart-line" aria-hidden="true"></span> Estrategia Digital
                 </h3>
                 <ul class="skill-list">
                   <li>Consultoría y diagnóstico digital</li>
@@ -525,7 +517,7 @@
                 </ul>
               </div>
               <div class="skill-category carousel-item reveal">
-                <h3><i class="fa-solid fa-layer-group"></i> Web & UX/UI</h3>
+                <h3><span class="icon icon-layer-group" aria-hidden="true"></span> Web & UX/UI</h3>
                 <ul class="skill-list">
                   <li>Figma / Adobe XD</li>
                   <li>Design Systems</li>
@@ -535,7 +527,7 @@
                 </ul>
               </div>
               <div class="skill-category carousel-item reveal">
-                <h3><i class="fa-solid fa-code"></i> Desarrollo Web</h3>
+                <h3><span class="icon icon-code" aria-hidden="true"></span> Desarrollo Web</h3>
                 <ul class="skill-list">
                   <li>Angular / TypeScript</li>
                   <li>WordPress / Drupal / CMS</li>
@@ -544,7 +536,7 @@
                 </ul>
               </div>
               <div class="skill-category carousel-item reveal">
-                <h3><i class="fa-solid fa-chalkboard-user"></i> Formación</h3>
+                <h3><span class="icon icon-training" aria-hidden="true"></span> Formación</h3>
                 <ul class="skill-list">
                   <li>Capacitación en herramientas digitales</li>
                   <li>Uso práctico de IA en atención y marketing</li>
@@ -553,7 +545,7 @@
                 </ul>
               </div>
               <div class="skill-category carousel-item reveal">
-                <h3><i class="fa-solid fa-microchip"></i> Automatización IA</h3>
+                <h3><span class="icon icon-chip" aria-hidden="true"></span> Automatización IA</h3>
                 <ul class="skill-list">
                   <li>Asistentes para atención 24/7</li>
                   <li>Automatización de procesos con n8n</li>
@@ -564,7 +556,7 @@
             </div>
 
             <button class="carousel-btn next" aria-label="Siguiente">
-              <i class="fa-solid fa-chevron-right"></i>
+              <span class="icon icon-chevron-right" aria-hidden="true"></span>
             </button>
           </div>
         </div>
@@ -583,22 +575,22 @@
           <div class="education-grid">
             <div class="edu-card reveal">
               <div class="edu-year">2017</div>
-              <h4>Diplomado en UX</h4>
+              <h3>Diplomado en UX</h3>
               <p>EducaciónIT</p>
             </div>
             <div class="edu-card reveal">
               <div class="edu-year">2014</div>
-              <h4>Analítica Web</h4>
+              <h3>Analítica Web</h3>
               <p>EOI (Escuela Organización Ind.)</p>
             </div>
             <div class="edu-card reveal">
               <div class="edu-year">2010</div>
-              <h4>Desarrollador Web</h4>
+              <h3>Desarrollador Web</h3>
               <p>ITMaster Academy</p>
             </div>
             <div class="edu-card reveal">
               <div class="edu-year">2002-2004</div>
-              <h4>Diseñador Multimedia</h4>
+              <h3>Diseñador Multimedia</h3>
               <p>Inst. Sup. Mariano Moreno</p>
             </div>
           </div>
@@ -616,21 +608,21 @@
                 href="https://www.linkedin.com/in/angular-frontend/details/recommendations/"
                 target="_blank"
                 rel="noopener noreferrer"
-                >aquí <i class="fa-solid fa-arrow-up-right-from-square"></i
+                >ver recomendaciones en LinkedIn <span class="icon icon-arrow-up-right" aria-hidden="true"></span
               ></a>
             </p>
           </div>
 
           <div class="carousel-container">
             <button class="carousel-btn prev" aria-label="Anterior">
-              <i class="fa-solid fa-chevron-left"></i>
+              <span class="icon icon-chevron-left" aria-hidden="true"></span>
             </button>
 
             <div class="carousel-slider">
               <!-- Rec 1: Jorge Guijarro -->
               <div class="testimonial-card carousel-item">
                 <div class="quote-icon">
-                  <i class="fa-solid fa-quote-left"></i>
+                  <span class="icon icon-quote" aria-hidden="true"></span>
                 </div>
                 <p class="testimonial-text">
                   "He tenido el placer de trabajar con Jorge en varios
@@ -639,7 +631,7 @@
                   desarrollador de primer nivel."
                 </p>
                 <div class="testimonial-author">
-                  <h4>Jorge Guijarro</h4>
+                  <p class="testimonial-name">Jorge Guijarro</p>
                   <span>Senior Product Designer | UX/UI Expert</span>
                 </div>
               </div>
@@ -647,7 +639,7 @@
               <!-- Rec 2: David Moñino -->
               <div class="testimonial-card carousel-item">
                 <div class="quote-icon">
-                  <i class="fa-solid fa-quote-left"></i>
+                  <span class="icon icon-quote" aria-hidden="true"></span>
                 </div>
                 <p class="testimonial-text">
                   "Jorge es una persona muy resolutiva que entiende
@@ -656,7 +648,7 @@
                   él."
                 </p>
                 <div class="testimonial-author">
-                  <h4>David Moñino Bermejo</h4>
+                  <p class="testimonial-name">David Moñino Bermejo</p>
                   <span>Technical Manager at NTT DATA</span>
                 </div>
               </div>
@@ -664,7 +656,7 @@
               <!-- Rec 3: Milena Hormaizteguy -->
               <div class="testimonial-card carousel-item">
                 <div class="quote-icon">
-                  <i class="fa-solid fa-quote-left"></i>
+                  <span class="icon icon-quote" aria-hidden="true"></span>
                 </div>
                 <p class="testimonial-text">
                   "Es un honor para mí haber compartido con Jorge... siempre
@@ -672,7 +664,7 @@
                   los problemas demuestra claramente la calidez profesional."
                 </p>
                 <div class="testimonial-author">
-                  <h4>Milena Hormaizteguy</h4>
+                  <p class="testimonial-name">Milena Hormaizteguy</p>
                   <span>QA Manager / Lead QA</span>
                 </div>
               </div>
@@ -680,7 +672,7 @@
               <!-- Rec 4: Pedro Javier Acosta -->
               <div class="testimonial-card carousel-item">
                 <div class="quote-icon">
-                  <i class="fa-solid fa-quote-left"></i>
+                  <span class="icon icon-quote" aria-hidden="true"></span>
                 </div>
                 <p class="testimonial-text">
                   "Excelente profesional, proactivo, comprometido y muy
@@ -688,7 +680,7 @@
                   fundamental en el equipo."
                 </p>
                 <div class="testimonial-author">
-                  <h4>Pedro Javier Acosta</h4>
+                  <p class="testimonial-name">Pedro Javier Acosta</p>
                   <span>Technical Lead at CMD Clarin Global</span>
                 </div>
               </div>
@@ -696,7 +688,7 @@
               <!-- Rec 5: Lucas Robledo -->
               <div class="testimonial-card carousel-item">
                 <div class="quote-icon">
-                  <i class="fa-solid fa-quote-left"></i>
+                  <span class="icon icon-quote" aria-hidden="true"></span>
                 </div>
                 <p class="testimonial-text">
                   "Sus amplios conocimientos en lo que hace lo hacen un
@@ -705,7 +697,7 @@
                   él."
                 </p>
                 <div class="testimonial-author">
-                  <h4>Lucas Robledo</h4>
+                  <p class="testimonial-name">Lucas Robledo</p>
                   <span>Application Developer at IBM</span>
                 </div>
               </div>
@@ -713,7 +705,7 @@
               <!-- Rec 6: German Hirtz -->
               <div class="testimonial-card carousel-item">
                 <div class="quote-icon">
-                  <i class="fa-solid fa-quote-left"></i>
+                  <span class="icon icon-quote" aria-hidden="true"></span>
                 </div>
                 <p class="testimonial-text">
                   "Jorge tiene un alto compromiso en lo que hace y es muy
@@ -721,7 +713,7 @@
                   investigación de nuevas formas de solucionar problemas."
                 </p>
                 <div class="testimonial-author">
-                  <h4>German Hirtz</h4>
+                  <p class="testimonial-name">German Hirtz</p>
                   <span>Programador Full Stack</span>
                 </div>
               </div>
@@ -729,7 +721,7 @@
               <!-- Rec 7: Lisandro Fernandez -->
               <div class="testimonial-card carousel-item">
                 <div class="quote-icon">
-                  <i class="fa-solid fa-quote-left"></i>
+                  <span class="icon icon-quote" aria-hidden="true"></span>
                 </div>
                 <p class="testimonial-text">
                   "Profesional comprometido y responsable. Además de su
@@ -737,7 +729,7 @@
                   positiva. Ha sido una experiencia muy enriquecedora."
                 </p>
                 <div class="testimonial-author">
-                  <h4>Lisandro Fernandez</h4>
+                  <p class="testimonial-name">Lisandro Fernandez</p>
                   <span>Senior Software Engineer</span>
                 </div>
               </div>
@@ -745,7 +737,7 @@
               <!-- Rec 8: Mauricio Cifuentes -->
               <div class="testimonial-card carousel-item">
                 <div class="quote-icon">
-                  <i class="fa-solid fa-quote-left"></i>
+                  <span class="icon icon-quote" aria-hidden="true"></span>
                 </div>
                 <p class="testimonial-text">
                   "Persona comprometida con su trabajo, siempre atento con sus
@@ -753,14 +745,14 @@
                   todo una gran persona."
                 </p>
                 <div class="testimonial-author">
-                  <h4>Mauricio Cifuentes</h4>
+                  <p class="testimonial-name">Mauricio Cifuentes</p>
                   <span>Full Stack Developer</span>
                 </div>
               </div>
             </div>
 
             <button class="carousel-btn next" aria-label="Siguiente">
-              <i class="fa-solid fa-chevron-right"></i>
+              <span class="icon icon-chevron-right" aria-hidden="true"></span>
             </button>
           </div>
         </div>
@@ -780,17 +772,17 @@
               </p>
 
               <div class="contact-card">
-                <i class="fa-solid fa-envelope"></i>
+                <span class="icon icon-envelope" aria-hidden="true"></span>
                 <a href="mailto:info@jorgerodriguez.es"
                   >info@jorgerodriguez.es</a
                 >
               </div>
               <!--                         <div class="contact-card">
-                            <i class="fa-solid fa-phone"></i>
+                            <span class="icon icon-headset" aria-hidden="true"></span>
                             <a href="tel:+34664777186">+34 664 77 71 86</a>
                         </div> -->
               <div class="contact-card">
-                <i class="fa-brands fa-linkedin"></i>
+                <span class="icon icon-linkedin" aria-hidden="true"></span>
                 <a
                   href="https://linkedin.com/in/angular-frontend/"
                   target="_blank"
@@ -799,7 +791,7 @@
                 >
               </div>
               <div class="contact-card">
-                <i class="fa-solid fa-location-dot"></i>
+                <span class="icon icon-location" aria-hidden="true"></span>
                 <span>Vigo, Pontevedra, España</span>
               </div>
             </div>
@@ -870,7 +862,7 @@
 
     <!-- Back to Top Button -->
     <button id="back-to-top" class="back-to-top" aria-label="Volver arriba">
-      <i class="fa-solid fa-arrow-up"></i>
+      <span class="icon icon-arrow-up" aria-hidden="true"></span>
     </button>
 
     <footer>
@@ -881,11 +873,9 @@
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"
-            ><i class="fa-brands fa-linkedin"></i
-          ></a>
+            ><span class="icon icon-linkedin" aria-hidden="true"></span></a>
           <a href="mailto:info@jorgerodriguez.es" aria-label="Email"
-            ><i class="fa-solid fa-envelope"></i
-          ></a>
+            ><span class="icon icon-envelope" aria-hidden="true"></span></a>
         </div>
         <p>
           &copy; <span id="year"></span> Jorge Rafael Rodriguez. Marketing
@@ -894,6 +884,6 @@
       </div>
     </footer>
 
-    <script src="script.js?v=20260428" defer></script>
+    <script src="script.min.js?v=20260514" defer></script>
   </body>
 </html>

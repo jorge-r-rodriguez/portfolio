@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
         body.classList.toggle('light-mode', isLight);
 
         if (themeIcon) {
-            themeIcon.className = isLight ? 'fa-solid fa-moon' : 'fa-solid fa-sun';
+            themeIcon.className = isLight ? 'icon icon-moon' : 'icon icon-sun';
         }
 
         if (themeToggleBtn) {
