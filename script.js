@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const body = document.body;
+    const header = document.querySelector('.header');
     const nav = document.querySelector('.nav');
     const mobileToggle = document.querySelector('.mobile-toggle');
     const themeToggleBtn = document.getElementById('theme-toggle');
@@ -75,6 +76,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    const navLinks = Array.from(document.querySelectorAll('.nav-link[href^="#"]'));
+
     document.querySelectorAll('.nav-link').forEach((link) => {
         link.addEventListener('click', () => {
             if (!nav || !mobileToggle) {
@@ -85,6 +88,14 @@ document.addEventListener('DOMContentLoaded', () => {
             mobileToggle.setAttribute('aria-expanded', 'false');
         });
     });
+
+    const getHeaderOffset = () => {
+        if (!header) {
+            return 0;
+        }
+
+        return Math.ceil(header.getBoundingClientRect().height) + 16;
+    };
 
     document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
         anchor.addEventListener('click', (event) => {
@@ -102,8 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             event.preventDefault();
 
-            const headerOffset = 80;
-            const targetTop = target.getBoundingClientRect().top + window.pageYOffset - headerOffset;
+            const targetTop = target.getBoundingClientRect().top + window.pageYOffset - getHeaderOffset();
 
             window.scrollTo({
                 top: targetTop,
@@ -111,6 +121,47 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     });
+
+    if (navLinks.length) {
+        const sections = navLinks
+            .map((link) => document.querySelector(link.getAttribute('href')))
+            .filter(Boolean);
+
+        const setActiveNavLink = () => {
+            const offset = getHeaderOffset() + 8;
+            let currentSection = sections[0];
+
+            sections.forEach((section) => {
+                if (section.getBoundingClientRect().top <= offset) {
+                    currentSection = section;
+                }
+            });
+
+            navLinks.forEach((link) => {
+                link.classList.toggle(
+                    'active',
+                    currentSection && link.getAttribute('href') === `#${currentSection.id}`
+                );
+            });
+        };
+
+        let navTicking = false;
+
+        window.addEventListener('scroll', () => {
+            if (navTicking) {
+                return;
+            }
+
+            navTicking = true;
+            window.requestAnimationFrame(() => {
+                setActiveNavLink();
+                navTicking = false;
+            });
+        }, { passive: true });
+
+        window.addEventListener('resize', setActiveNavLink);
+        setActiveNavLink();
+    }
 
     const contactForm = document.getElementById('contact-form');
     const submitBtn = document.getElementById('submit-btn');

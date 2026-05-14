@@ -1,651 +1,950 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="assets/images/favicon.png" />
 
     <!-- SEO Meta Tags -->
-    <title>Jorge Rafael Rodriguez | Senior Frontend Developer Angular & UX/UI Specialist</title>
-    <meta name="description"
-        content="Portfolio de Jorge Rafael Rodriguez. Senior Frontend Developer con +15 años de experiencia liderando proyectos digitales en Angular, Ionic y UX/UI para ICBC, Imatia y Coca-Cola Company.">
-    <meta name="keywords"
-        content="Frontend Developer, Angular Expert, UX/UI Design, Ionic, TypeScript, Accesibilidad Web, WCAG, Senior Developer, Vigo, España">
-    <meta name="author" content="Jorge Rafael Rodriguez">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://jorgerodriguez.es/">
+    <title>
+      Jorge Rafael Rodriguez | Desarrollador Frontend Angular & UX/UI, Automatización IA
+      
+    </title>
+    <meta
+      name="description"
+      content="Consultoría digital para empresas: marketing online, automatización con IA, UX/UI, asistentes 24/7, captación de leads, SEO local y mejora de conversión web."
+    />
+    <meta
+      name="keywords"
+      content="Marketing Turístico, Automatización con IA, Consultoría Digital, Asistentes IA, SEO Local, Google Business, Captación de Leads, UX/UI, Desarrollo Web, n8n, Vigo, Pontevedra"
+    />
+    <meta name="author" content="Jorge Rafael Rodriguez" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://jorgerodriguez.es/" />
 
     <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="profile">
-    <meta property="og:url" content="https://jorgerodriguez.es/">
-    <meta property="og:title" content="Jorge Rafael Rodriguez | Senior Frontend Developer & UX/UI">
-    <meta property="og:description"
-        content="Especialista en desarrollo frontend y diseño de interfaces con más de 15 años de experiencia. Transformo ideas complejas en experiencias digitales fluidas.">
-    <meta property="og:image" content="assets/og-image.jpg">
+    <meta property="og:type" content="profile" />
+    <meta property="og:url" content="https://jorgerodriguez.es/" />
+    <meta
+      property="og:title"
+      content="Jorge Rafael Rodriguez | Marketing Turístico Digital, Automatización IA & UX/UI"
+    />
+    <meta
+      property="og:description"
+      content="Ayudo a empresas y agencias a captar más clientes, automatizar consultas y mejorar su presencia digital con IA, UX/UI y tecnología web."
+    />
+    <meta property="og:image" content="https://jorgerodriguez.es/assets/og-image.jpg" />
 
     <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:title" content="Jorge Rafael Rodriguez | Senior Frontend Developer">
-    <meta property="twitter:description"
-        content="Expertise en Angular, Performance y Diseño de Sistemas. Mira mi trayectoria.">
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:title"
+      content="Jorge Rafael Rodriguez | Marketing Turístico Digital, Automatización IA & UX/UI"
+    />
+    <meta
+      property="twitter:description"
+      content="Consultoría, automatización y soluciones digitales para turismo, restauración, agencias, campings y actividades locales."
+    />
+    <meta property="twitter:image" content="https://jorgerodriguez.es/assets/og-image.jpg" />
 
     <!-- JSON-LD Schema -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Jorge Rafael Rodriguez",
-      "jobTitle": "Senior Frontend Developer & UX/UI Specialist",
-      "url": "https://jorgerodriguez.es/",
-      "sameAs": [
-        "https://www.linkedin.com/in/angular-frontend/"
-      ],
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Vigo",
-        "addressRegion": "Pontevedra",
-        "addressCountry": "España"
-      },
-      "alumniOf": [
-        "Instituto Superior Mariano Moreno",
-        "ITMaster Academy",
-        "EducaciónIT",
-        "EOI Escueal de Organización Industrial"
-      ]
-    }
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Jorge Rafael Rodriguez",
+        "jobTitle": "Consultor en Marketing Turístico Digital, UX/UI & Automatización con IA",
+        "url": "https://jorgerodriguez.es/",
+        "sameAs": ["https://www.linkedin.com/in/angular-frontend/"],
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Vigo",
+          "addressRegion": "Pontevedra",
+          "addressCountry": "España"
+        },
+        "alumniOf": [
+          "Instituto Superior Mariano Moreno",
+          "ITMaster Academy",
+          "EducaciónIT",
+          "EOI Escuela de Organización Industrial"
+        ]
+      }
     </script>
 
     <!-- Fonts & Icons -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-    <link rel="dns-prefetch" href="//fonts.googleapis.com">
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
-    <link rel="preload"
-        href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&family=Plus+Jakarta+Sans:wght@400;500;700&display=swap"
-        as="style">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+    <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com" />
     <link
-        href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&family=Plus+Jakarta+Sans:wght@400;500;700&display=swap"
-        rel="stylesheet" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="style.css">
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        media="print" onload="this.media='all'">
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&family=Plus+Jakarta+Sans:wght@400;500;700&display=swap"
+      as="style"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&family=Plus+Jakarta+Sans:wght@400;500;700&display=swap"
+      rel="stylesheet"
+      media="print"
+      onload="this.media = 'all'"
+    />
+    <link rel="stylesheet" href="style.css?v=20260428" />
+    <link
+      rel="preload"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      as="style"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      media="print"
+      onload="this.media = 'all'"
+    />
     <noscript>
-        <link
-            href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&family=Plus+Jakarta+Sans:wght@400;500;700&display=swap"
-            rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+      <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&family=Plus+Jakarta+Sans:wght@400;500;700&display=swap"
+        rel="stylesheet"
+      />
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      />
     </noscript>
-</head>
+  </head>
 
-<body>
+  <body>
     <script>
-        try {
-            if (localStorage.getItem('theme') === 'light') {
-                document.body.classList.add('light-mode');
-            }
-        } catch (error) {
+      try {
+        if (localStorage.getItem("theme") === "light") {
+          document.body.classList.add("light-mode");
         }
+      } catch (error) {}
     </script>
     <header class="header">
-        <div class="container nav-container">
-            <a href="#hero" class="logo" aria-label="Inicio">JR<span class="accent">.</span></a>
-            <nav class="nav">
-                <ul class="nav-list">
-                    <li><a href="#about" class="nav-link">Perfil</a></li>
-                    <li><a href="#experience" class="nav-link">Trayectoria</a></li>
-                    <li><a href="#skills" class="nav-link">Skills</a></li>
-                    <li><a href="#education" class="nav-link">Formación</a></li>
-                    <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
-                    <li><a href="#testimonials" class="nav-link">Testimonios</a></li>
-                    <li><a href="#contact" class="nav-link btn-featured">Contactar</a></li>
-                    <li>
-                        <button id="theme-toggle" class="theme-toggle" aria-label="Cambiar a modo claro">
-                            <i class="fa-solid fa-sun"></i>
-                        </button>
-                    </li>
-                </ul>
-                <button class="mobile-toggle" aria-label="Abrir menú" aria-expanded="false">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </button>
-            </nav>
-        </div>
+      <div class="container nav-container">
+        <a href="#hero" class="logo" aria-label="Inicio"
+          >JR<span class="accent">.</span></a
+        >
+        <nav class="nav">
+          <ul class="nav-list">
+            <li><a href="#about" class="nav-link">Perfil</a></li>
+            <li><a href="#ai-solutions" class="nav-link">Marketing IA</a></li>
+            <li><a href="#experience" class="nav-link">Trayectoria</a></li>
+            <li><a href="#skills" class="nav-link">Áreas</a></li>
+            <li><a href="#education" class="nav-link">Formación</a></li>
+            <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+            <li><a href="#testimonials" class="nav-link">Testimonios</a></li>
+            <li>
+              <a href="#contact" class="nav-link btn-featured">Contactar</a>
+            </li>
+            <li>
+              <button
+                id="theme-toggle"
+                class="theme-toggle"
+                aria-label="Cambiar a modo claro"
+              >
+                <i class="fa-solid fa-sun"></i>
+              </button>
+            </li>
+          </ul>
+          <button
+            class="mobile-toggle"
+            aria-label="Abrir menú"
+            aria-expanded="false"
+          >
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </button>
+        </nav>
+      </div>
     </header>
 
     <main>
-        <!-- Hero Section -->
-        <section id="hero" class="hero">
-            <div class="container hero-content">
-                <span class="subtitle slide-up">Hola, soy Jorge Rodriguez</span>
-                <h1 class="slide-up delay-1">Desarrollador Frontend <br><span class="text-gradient">Angular &
-                        UX/UI</span>
-                </h1>
-                <p class="description slide-up delay-2">
-                    Ayudo a empresas a construir productos digitales escalables y accesibles.
-                    Más de 15 años fusionando ingeniería robusta con diseño de interfaces centrado en el usuario.
+      <!-- Hero Section -->
+      <section id="hero" class="hero">
+        <div class="container hero-content">
+          <span class="subtitle slide-up">Hola, soy Jorge Rodriguez</span>
+          <h1 class="slide-up delay-1">
+            Desarrollador Frontend <br /><span class="text-gradient"
+              >Angular &amp; UX/UI</span
+            >
+          </h1>
+          <p class="description slide-up delay-2">
+            Ayudo a empresas y agencias a captar más clientes, automatizar
+            consultas y transformar su presencia digital en resultados reales.
+            Combino estrategia digital, automatización con IA, UX/UI y más de 15
+            años desarrollando soluciones escalables para marcas, eCommerce y
+            negocios de alto impacto.
+          </p>
+          <div class="cta-group slide-up delay-3">
+            <a href="#contact" class="btn btn-primary">Agendar Reunión</a>
+            <a href="#ai-solutions" class="btn btn-secondary">Ver Servicios</a>
+          </div>
+        </div>
+        <div class="hero-background">
+          <div class="glow glow-1"></div>
+          <div class="glow glow-2"></div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" class="about section-padding">
+        <div class="container">
+          <div class="section-header">
+            <h2>Perfil <span class="accent">Profesional</span></h2>
+          </div>
+          <div class="about-content reveal">
+            <div class="about-card">
+              <img
+                src="assets/images/foto-perfil.jpg"
+                alt="Jorge Rafael Rodríguez - Consultor en marketing turístico digital, UX/UI y automatización con IA"
+                class="profile-thumbnail"
+                data-noindex="true"
+                loading="lazy"
+                decoding="async"
+                width="200"
+                height="200"
+              />
+
+              <h3>
+                <!-- <i class="fa-solid fa-route"></i> -->
+                Perfil especializado en crecimiento digital y automatización
+                inteligente
+              </h3>
+
+              <p>
+                Mi foco actual es ayudar a empresas a mejorar su captación,
+                comunicación y operación digital. Trabajo sobre tres frentes:
+                <strong>consultoría para detectar oportunidades</strong>,
+                <strong>gestión de soluciones online</strong> y
+                <strong>automatización con IA</strong> para reducir tareas
+                repetitivas y optimizar procesos.
+              </p>
+
+              <p style="margin-top: 1rem">
+                Aporto una base técnica sólida en
+                <strong
+                  >desarrollo web, UX/UI, analítica, SEO, performance e
+                  integraciones</strong
+                >, después de más de 15 años en productos digitales para
+                compañías como <strong>The Coca-Cola Company</strong> e
+                <strong>ICBC Argentina</strong>. Ese recorrido me permite unir
+                marketing, tecnología y automatización sin depender de
+                soluciones genéricas.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- AI Solutions Section -->
+      <section id="ai-solutions" class="ai-solutions section-padding">
+        <div class="container">
+          <div class="section-header">
+            <h2>
+              Desarrollo Web &
+              <span class="accent">Automatización para empresas</span>
+            </h2>
+          </div>
+
+          <div class="ai-solutions-grid">
+            <article class="ai-card reveal">
+              <i class="fa-solid fa-magnifying-glass-chart"></i>
+              <h3>Consultoría y diagnóstico digital</h3>
+              <p>
+                Análisis de web, experiencia de usuario, SEO local, Google
+                Business, canales de captación, reputación online y puntos de
+                fuga en el proceso de reserva o contacto.
+              </p>
+            </article>
+
+            <article class="ai-card reveal">
+              <i class="fa-solid fa-bullhorn"></i>
+              <h3>Gestión de captación y conversión</h3>
+              <p>
+                Landing pages, formularios, campañas, contenidos, medición,
+                email marketing y flujos para recuperar interesados en rutas,
+                reservas, menús, alojamientos o experiencias concretas.
+              </p>
+            </article>
+
+            <article class="ai-card reveal">
+              <i class="fa-solid fa-headset"></i>
+              <h3>Asistentes IA y automatización operativa</h3>
+              <p>
+                Asistentes 24/7 para preguntas frecuentes, reservas,
+                disponibilidad y precios, conectados a formularios, CRM, email o
+                WhatsApp para reducir carga manual y acelerar la respuesta.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tourism Clients Section -->
+
+      <!-- Experience Section -->
+      <section id="experience" class="experience section-padding">
+        <div class="container">
+          <div class="section-header">
+            <h2>Trayectoria <span class="accent">Laboral</span></h2>
+          </div>
+          <div class="timeline">
+            <!-- Imatia -->
+            <div class="timeline-item reveal">
+              <div class="timeline-dot"></div>
+              <div class="timeline-date">Nov 2023</div>
+              <div class="timeline-content">
+                <h3>Senior Frontend Developer (Angular & Ionic)</h3>
+                <h4>Imatia Innovation</h4>
+                <p>
+                  Desarrollo de <strong>Social TV</strong>, una plataforma
+                  crítica para combatir la soledad en adultos mayores.
                 </p>
-                <div class="cta-group slide-up delay-3">
-                    <a href="#contact" class="btn btn-primary">Agendar Reunión</a>
-                    <a href="portfolio.html" class="btn btn-secondary">Explorar Proyectos</a>
-                </div>
+                <ul>
+                  <li>
+                    Optimización radical de UX/UI y cumplimiento de estándares
+                    de accesibilidad para público senior.
+                  </li>
+                  <li>
+                    Migración estratégica de funcionalidades BackOffice a una
+                    App Móvil Híbrida (Ionic + Angular).
+                  </li>
+                  <li>Stack: Angular 19, Ionic 7, RxJS, Tailwind CSS.</li>
+                </ul>
+              </div>
             </div>
-            <div class="hero-background">
-                <div class="glow glow-1"></div>
-                <div class="glow glow-2"></div>
+
+            <!-- Adviters -->
+            <div class="timeline-item reveal">
+              <div class="timeline-dot"></div>
+              <div class="timeline-date">Mar 2023 - Nov 2023</div>
+              <div class="timeline-content">
+                <h3>Engineering Manager</h3>
+                <h4>Adviters (Cliente: Fiserv / Mastercard)</h4>
+                <p>
+                  Dirigí la transformación técnica del área de pagos digitales,
+                  gestionando equipos multidisciplinarios.
+                </p>
+                <ul>
+                  <li>
+                    Definición de arquitectura frontend escalable y segura para
+                    el sector fintech.
+                  </li>
+                  <li>
+                    Implementación de metodologías ágiles y CI/CD para acelerar
+                    el time-to-market.
+                  </li>
+                  <li>
+                    Mentoring técnico y elevación de los estándares de calidad
+                    de código.
+                  </li>
+                  <li>
+                    Stack: Angular 14-15, Material UI, TypeScript, RxJS,
+                    Scrum/Kanban.
+                  </li>
+                </ul>
+              </div>
             </div>
-        </section>
 
-        <!-- About Section -->
-        <section id="about" class="about section-padding">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Perfil <span class="accent">Profesional</span></h2>
-                </div>
-                <div class="about-content reveal">
-                    <div class="about-card">
-                        <img src="assets/images/foto-perfil.jpg"
-                            alt="Jorge Rafael Rodríguez - Senior Frontend Angular Developer" class="profile-thumbnail"
-                            data-noindex="true" loading="lazy" decoding="async" width="200" height="200">
-
-                        <h3><i class="fa-solid fa-rocket"></i> Arquitectura Frontend de Alto Impacto</h3>
-
-                        <p>
-                            Más que escribir código, diseño y desarrollo <strong>soluciones frontend escalables</strong>
-                            con
-                            <strong>Angular</strong> que impactan directamente en el negocio. Con más de 15 años de
-                            experiencia,
-                            combino <strong>arquitectura limpia, rendimiento y testing automatizado</strong> con una
-                            fuerte
-                            orientación a la experiencia de usuario (<strong>UX/UI, accesibilidad WCAG y
-                                WAI-ARIA</strong>).
-                        </p>
-
-                        <p style="margin-top: 1rem;">
-                            He liderado proyectos de alto tráfico para compañías como <strong>The Coca-Cola
-                                Company</strong> y
-                            <strong>ICBC Argentina</strong>, construyendo interfaces rápidas, inclusivas y mantenibles.
-                            Además,
-                            integro <strong>automatización y optimización mediante inteligencia artificial</strong>
-                            utilizando
-                            herramientas como <strong>Claude Cowork</strong>, <strong>n8n</strong> y otros agentes, para
-                            acelerar
-                            procesos, mejorar la eficiencia y aportar soluciones innovadoras con foco en resultados.
-                        </p>
-                    </div>
-                </div>
+            <!-- Wabi Project -->
+            <div class="timeline-item reveal">
+              <div class="timeline-dot"></div>
+              <div class="timeline-date">Nov 2021 - Feb 2023</div>
+              <div class="timeline-content">
+                <h3>Frontend eCommerce Manager</h3>
+                <h4>Wabi Project (The Coca-Cola Company)</h4>
+                <p>
+                  Orquesté la arquitectura frontend de un ecosistema de
+                  marketplace global (Wabi2B, WabiPay).
+                </p>
+                <ul>
+                  <li>
+                    Integración y evolución del Design System corporativo para
+                    garantizar coherencia de marca.
+                  </li>
+                  <li>
+                    Optimización de performance en aplicaciones de alto tráfico
+                    para mercados internacionales.
+                  </li>
+                  <li>Stack: Angular 14, Angular Material, Bootstrap.</li>
+                </ul>
+              </div>
             </div>
-        </section>
 
-        <!-- Experience Section -->
-        <section id="experience" class="experience section-padding">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Trayectoria <span class="accent">Laboral</span></h2>
-                </div>
-                <div class="timeline">
-                    <!-- Imatia -->
-                    <div class="timeline-item reveal">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-date">Nov 2023 - Actualidad</div>
-                        <div class="timeline-content">
-                            <h3>Senior Frontend Developer (Angular & Ionic)</h3>
-                            <h4>Imatia Innovation</h4>
-                            <p>Desarrollo de <strong>Social TV</strong>, una plataforma crítica para combatir
-                                la soledad en adultos mayores.</p>
-                            <ul>
-                                <li>Optimización radical de UX/UI y cumplimiento de estándares de accesibilidad para
-                                    público senior.</li>
-                                <li>Migración estratégica de funcionalidades BackOffice a una App Móvil Híbrida (Ionic +
-                                    Angular).</li>
-                                <li>Stack: Angular 19, Ionic 7, RxJS, Tailwind CSS.</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Adviters -->
-                    <div class="timeline-item reveal">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-date">Mar 2023 - Nov 2023</div>
-                        <div class="timeline-content">
-                            <h3>Engineering Manager</h3>
-                            <h4>Adviters (Cliente: Fiserv / Mastercard)</h4>
-                            <p>Dirigí la transformación técnica del área de pagos digitales, gestionando equipos
-                                multidisciplinarios.</p>
-                            <ul>
-                                <li>Definición de arquitectura frontend escalable y segura para el sector fintech.</li>
-                                <li>Implementación de metodologías ágiles y CI/CD para acelerar el time-to-market.</li>
-                                <li>Mentoring técnico y elevación de los estándares de calidad de código.</li>
-                                <li>Stack: Angular 14-15, Material UI, TypeScript, RxJS, Scrum/Kanban.</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Wabi Project -->
-                    <div class="timeline-item reveal">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-date">Nov 2021 - Feb 2023</div>
-                        <div class="timeline-content">
-                            <h3>Frontend eCommerce Manager</h3>
-                            <h4>Wabi Project (The Coca-Cola Company)</h4>
-                            <p>Orquesté la arquitectura frontend de un ecosistema de marketplace global (Wabi2B,
-                                WabiPay).</p>
-                            <ul>
-                                <li>Integración y evolución del Design System corporativo para garantizar coherencia de
-                                    marca.</li>
-                                <li>Optimización de performance en aplicaciones de alto tráfico para mercados
-                                    internacionales.</li>
-                                <li>Stack: Angular 14, Angular Material, Bootstrap.</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Soflex -->
-                    <div class="timeline-item reveal">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-date">Oct 2020 - Nov 2021</div>
-                        <div class="timeline-content">
-                            <h3>UX/UI Designer & Frontend Developer</h3>
-                            <h4>Soflex</h4>
-                            <p>Diseño de soluciones SaaS críticas para seguridad pública y logística.</p>
-                            <ul>
-                                <li>Modernización del Sistema Integral de Emergencias (Policía/Bomberos) usando
-                                    tecnología GIS.</li>
-                                <li>Desarrollo de interfaces complejas de despacho y monitoreo en tiempo real.</li>
-                                <li>Stack: Angular 12, Google Maps Platform, Leaflet.</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- ICBC -->
-                    <div class="timeline-item reveal">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-date">Oct 2019 - Oct 2020</div>
-                        <div class="timeline-content">
-                            <h3>Senior Frontend Developer</h3>
-                            <h4>ICBC Argentina</h4>
-                            <p>Optimización de la banca digital para millones de usuarios.</p>
-                            <ul>
-                                <li>Mejora sustancial en la performance de operaciones bancarias críticas.</li>
-                                <li>Desarrollo de componentes financieros avanzados con KendoUI.</li>
-                                <li>Stack: Angular 8-9, TypeScript, RxJS, KendoUI</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Secretaría Innovación -->
-                    <div class="timeline-item reveal">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-date">Mar 2019 - Oct 2019</div>
-                        <div class="timeline-content">
-                            <h3>Senior Frontend Developer</h3>
-                            <h4>Secretaría de Innovación Pública Argentina</h4>
-                            <p>Desarrollé y mantuve plataformas web y móviles gubernamentales en Drupal y WordPress,
-                                asegurando el cumplimiento de los requerimientos institucionales.</p>
-                            <ul>
-                                <li>Trabajé con librerías propias de la administración de gobierno, optimizando la UX/UI
-                                    y el rendimiento.</li>
-                                <li>Stack: Drupal, WordPress, UX/UI, Accesibilidad (WCAG, ARIA).</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Hipódromo -->
-                    <div class="timeline-item reveal">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-date">Ene 2012 - Jun 2018</div>
-                        <div class="timeline-content">
-                            <h3>Senior Frontend Developer</h3>
-                            <h4>Hipódromo Argentino de Palermo</h4>
-                            <p>Diseñé, desarrollé e implementé <strong>Ondiss</strong>, la plataforma líder de juego
-                                online en Argentina. Lideré la arquitectura frontend en un entorno de alto tráfico y
-                                seguridad crítica.</p>
-                            <ul>
-                                <li>Implementé UX/UI avanzado, optimización SEO y estrategias de accesibilidad.</li>
-                                <li>Colaboré con backend y negocio para soluciones innovadoras en apuestas online.</li>
-                                <li>Stack: Umbraco CMS, HTML, CSS, SCSS, JavaScript, SEO.</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- CMD -->
-                    <div class="timeline-item reveal">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-date">Dic 2009 - Ene 2012</div>
-                        <div class="timeline-content">
-                            <h3>Senior Frontend Developer</h3>
-                            <h4>CMD - Grupo Clarín</h4>
-                            <p>Desarrollé e integré interfaces para sitios de masivo tráfico como <strong>TN</strong> y
-                                <strong>El Trece TV</strong>.
-                            </p>
-                            <ul>
-                                <li>Lideré la optimización de CMS (Drupal, WordPress) mejorando flujos de trabajo.</li>
-                                <li>Optimización de SEO y performance para millones de usuarios.</li>
-                                <li>Stack: Drupal, WordPress, HTML, CSS, JS.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+            <!-- Soflex -->
+            <div class="timeline-item reveal">
+              <div class="timeline-dot"></div>
+              <div class="timeline-date">Oct 2020 - Nov 2021</div>
+              <div class="timeline-content">
+                <h3>UX/UI Designer & Frontend Developer</h3>
+                <h4>Soflex</h4>
+                <p>
+                  Diseño de soluciones SaaS críticas para seguridad pública y
+                  logística.
+                </p>
+                <ul>
+                  <li>
+                    Modernización del Sistema Integral de Emergencias
+                    (Policía/Bomberos) usando tecnología GIS.
+                  </li>
+                  <li>
+                    Desarrollo de interfaces complejas de despacho y monitoreo
+                    en tiempo real.
+                  </li>
+                  <li>Stack: Angular 12, Google Maps Platform, Leaflet.</li>
+                </ul>
+              </div>
             </div>
-        </section>
 
-        <!-- Skills Section -->
-        <section id="skills" class="skills section-padding">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Expertise <span class="accent">Técnico</span></h2>
-                </div>
-                <div class="carousel-container">
-                    <button class="carousel-btn prev" aria-label="Anterior"><i
-                            class="fa-solid fa-chevron-left"></i></button>
-
-                    <div class="carousel-slider">
-                        <div class="skill-category carousel-item reveal">
-                            <h3><i class="fa-brands fa-angular"></i> Core Tech</h3>
-                            <ul class="skill-list">
-                                <li>Angular (v17+)</li>
-                                <li>TypeScript / RxJS</li>
-                                <li>Ionic Framework</li>
-                                <li>HTML5 / Semántico</li>
-                                <li>CSS3 / SASS / Tailwind</li>
-                            </ul>
-                        </div>
-                        <div class="skill-category carousel-item reveal">
-                            <h3><i class="fa-solid fa-layer-group"></i> UX & Design</h3>
-                            <ul class="skill-list">
-                                <li>Figma / Adobe XD</li>
-                                <li>Design Systems</li>
-                                <li>Accesibilidad (WCAG)</li>
-                                <li>Responsive Design</li>
-                                <li>Animaciones CSS/JS</li>
-                            </ul>
-                        </div>
-                        <div class="skill-category carousel-item reveal">
-                            <h3><i class="fa-solid fa-rocket"></i> E-Commerce & CMS</h3>
-                            <ul class="skill-list">
-                                <li>Magento / PrestaShop</li>
-                                <li>WooCommerce</li>
-                                <li>Drupal / WordPress</li>
-                                <li>Integración de Pagos</li>
-                            </ul>
-                        </div>
-                        <div class="skill-category carousel-item reveal">
-                            <h3><i class="fa-solid fa-list-check"></i> Management</h3>
-                            <ul class="skill-list">
-                                <li>Engineering Management</li>
-                                <li>Scrum / Kanban</li>
-                                <li>CI/CD & DevOps Basics</li>
-                                <li>Mentoring de Equipos</li>
-                            </ul>
-                        </div>
-                        <div class="skill-category carousel-item reveal">
-                            <h3><i class="fa-solid fa-microchip"></i> Core Tech</h3>
-                            <ul class="skill-list">
-                                <li>Optimización de desarrollo con IA</li>
-                                <li>Automatización de procesos con n8n</li>
-                                <li>Generación y mejora de código asistida</li>
-                                <li>Integración de APIs y workflows inteligentes</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <button class="carousel-btn next" aria-label="Siguiente"><i
-                            class="fa-solid fa-chevron-right"></i></button>
-                </div>
+            <!-- ICBC -->
+            <div class="timeline-item reveal">
+              <div class="timeline-dot"></div>
+              <div class="timeline-date">Oct 2019 - Oct 2020</div>
+              <div class="timeline-content">
+                <h3>Senior Frontend Developer</h3>
+                <h4>ICBC Argentina</h4>
+                <p>
+                  Optimización de la banca digital para millones de usuarios.
+                </p>
+                <ul>
+                  <li>
+                    Mejora sustancial en la performance de operaciones bancarias
+                    críticas.
+                  </li>
+                  <li>
+                    Desarrollo de componentes financieros avanzados con KendoUI.
+                  </li>
+                  <li>Stack: Angular 8-9, TypeScript, RxJS, KendoUI</li>
+                </ul>
+              </div>
             </div>
-        </section>
 
-        <!-- Education Section -->
-        <section id="education" class="education section-padding" style="background-color: var(--bg-card);">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Formación <span class="accent">Académica</span></h2>
-                </div>
-                <div class="education-grid">
-                    <div class="edu-card reveal">
-                        <div class="edu-year">2017</div>
-                        <h4>Diplomado en UX</h4>
-                        <p>EducaciónIT</p>
-                    </div>
-                    <div class="edu-card reveal">
-                        <div class="edu-year">2014</div>
-                        <h4>Analítica Web</h4>
-                        <p>EOI (Escuela Organización Ind.)</p>
-                    </div>
-                    <div class="edu-card reveal">
-                        <div class="edu-year">2010</div>
-                        <h4>Desarrollador Web</h4>
-                        <p>ITMaster Academy</p>
-                    </div>
-                    <div class="edu-card reveal">
-                        <div class="edu-year">2002-2004</div>
-                        <h4>Diseñador Multimedia</h4>
-                        <p>Inst. Sup. Mariano Moreno</p>
-                    </div>
-                </div>
+            <!-- Secretaría Innovación -->
+            <div class="timeline-item reveal">
+              <div class="timeline-dot"></div>
+              <div class="timeline-date">Mar 2019 - Oct 2019</div>
+              <div class="timeline-content">
+                <h3>Senior Frontend Developer</h3>
+                <h4>Secretaría de Innovación Pública Argentina</h4>
+                <p>
+                  Desarrollé y mantuve plataformas web y móviles gubernamentales
+                  en Drupal y WordPress, asegurando el cumplimiento de los
+                  requerimientos institucionales.
+                </p>
+                <ul>
+                  <li>
+                    Trabajé con librerías propias de la administración de
+                    gobierno, optimizando la UX/UI y el rendimiento.
+                  </li>
+                  <li>
+                    Stack: Drupal, WordPress, UX/UI, Accesibilidad (WCAG, ARIA).
+                  </li>
+                </ul>
+              </div>
             </div>
-        </section>
 
-        </section>
-
-        <!-- Testimonials Section -->
-        <section id="testimonials" class="testimonials section-padding">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Lo que dicen <span class="accent">de mí</span></h2>
-                    <p class="testimonials-verify">
-                        Estos son testimonios reales de LinkedIn. Puedes corroborarlos <a
-                            href="https://www.linkedin.com/in/angular-frontend/details/recommendations/"
-                            target="_blank">aquí <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                    </p>
-                </div>
-
-                <div class="carousel-container">
-                    <button class="carousel-btn prev" aria-label="Anterior"><i
-                            class="fa-solid fa-chevron-left"></i></button>
-
-                    <div class="carousel-slider">
-                        <!-- Rec 1: Jorge Guijarro -->
-                        <div class="testimonial-card carousel-item">
-                            <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
-                            <p class="testimonial-text">"He tenido el placer de trabajar con Jorge en varios
-                                proyectos... Su conocimiento profundo ha sido fundamental para el éxito de nuestros
-                                proyectos... Sin duda, Jorge es un desarrollador de primer nivel."</p>
-                            <div class="testimonial-author">
-                                <h4>Jorge Guijarro</h4>
-                                <span>Senior Product Designer | UX/UI Expert</span>
-                            </div>
-                        </div>
-
-                        <!-- Rec 2: David Moñino -->
-                        <div class="testimonial-card carousel-item">
-                            <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
-                            <p class="testimonial-text">"Jorge es una persona muy resolutiva que entiende perfectamente
-                                los requerimientos y es capaz de hacerse a la idea... Es un placer trabajar con gente
-                                tan profesional como él."</p>
-                            <div class="testimonial-author">
-                                <h4>David Moñino Bermejo</h4>
-                                <span>Technical Manager at NTT DATA</span>
-                            </div>
-                        </div>
-
-                        <!-- Rec 3: Milena Hormaizteguy -->
-                        <div class="testimonial-card carousel-item">
-                            <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
-                            <p class="testimonial-text">"Es un honor para mí haber compartido con Jorge... siempre
-                                dispuesto a trabajar en equipo. La rapidez en la resolución de los problemas demuestra
-                                claramente la calidez profesional."</p>
-                            <div class="testimonial-author">
-                                <h4>Milena Hormaizteguy</h4>
-                                <span>QA Manager / Lead QA</span>
-                            </div>
-                        </div>
-
-                        <!-- Rec 4: Pedro Javier Acosta -->
-                        <div class="testimonial-card carousel-item">
-                            <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
-                            <p class="testimonial-text">"Excelente profesional, pro-activo, comprometido y muy creativo.
-                                Un muy buen compañero de trabajo y un integrante fundamental en el equipo."</p>
-                            <div class="testimonial-author">
-                                <h4>Pedro Javier Acosta</h4>
-                                <span>Technical Lead at CMD Clarin Global</span>
-                            </div>
-                        </div>
-
-                        <!-- Rec 5: Lucas Robledo -->
-                        <div class="testimonial-card carousel-item">
-                            <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
-                            <p class="testimonial-text">"Sus amplios conocimientos en lo que hace lo hacen un integrante
-                                fundamental en cualquier grupo de trabajo. Su rapidez para llevar a cabo tareas... da
-                                gusto trabajar con él."</p>
-                            <div class="testimonial-author">
-                                <h4>Lucas Robledo</h4>
-                                <span>Application Developer at IBM</span>
-                            </div>
-                        </div>
-
-                        <!-- Rec 6: German Hirtz -->
-                        <div class="testimonial-card carousel-item">
-                            <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
-                            <p class="testimonial-text">"Jorge tiene un alto compromiso en lo que hace y es muy
-                                proactivo en sus tareas. Es inquieto y le interesa la investigacion de nuevas formas de
-                                solucionar problemas."</p>
-                            <div class="testimonial-author">
-                                <h4>German Hirtz</h4>
-                                <span>Programador Full Stack</span>
-                            </div>
-                        </div>
-
-                        <!-- Rec 7: Lisandro Fernandez -->
-                        <div class="testimonial-card carousel-item">
-                            <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
-                            <p class="testimonial-text">"Profesional comprometido y responsable. Ademas de su
-                                experiencia en esta profesión, tiene siempre una actitud positiva. Ha sido una
-                                experiencia muy enriquecedora."</p>
-                            <div class="testimonial-author">
-                                <h4>Lisandro Fernandez</h4>
-                                <span>Senior Software Engineer</span>
-                            </div>
-                        </div>
-
-                        <!-- Rec 8: Mauricio Cifuentes -->
-                        <div class="testimonial-card carousel-item">
-                            <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
-                            <p class="testimonial-text">"Persona comprometida con su trabajo, siempre atento con sus
-                                compañeros. De gran valor para cualquier empresa, pero sobre todo una gran persona."</p>
-                            <div class="testimonial-author">
-                                <h4>Mauricio Cifuentes</h4>
-                                <span>Full Stack Developer</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <button class="carousel-btn next" aria-label="Siguiente"><i
-                            class="fa-solid fa-chevron-right"></i></button>
-                </div>
+            <!-- Hipódromo -->
+            <div class="timeline-item reveal">
+              <div class="timeline-dot"></div>
+              <div class="timeline-date">Ene 2012 - Jun 2018</div>
+              <div class="timeline-content">
+                <h3>Senior Frontend Developer</h3>
+                <h4>Hipódromo Argentino de Palermo</h4>
+                <p>
+                  Diseñé, desarrollé e implementé <strong>Ondiss</strong>, la
+                  plataforma líder de juego online en Argentina. Lideré la
+                  arquitectura frontend en un entorno de alto tráfico y
+                  seguridad crítica.
+                </p>
+                <ul>
+                  <li>
+                    Implementé UX/UI avanzado, optimización SEO y estrategias de
+                    accesibilidad.
+                  </li>
+                  <li>
+                    Colaboré con backend y negocio para soluciones innovadoras
+                    en apuestas online.
+                  </li>
+                  <li>Stack: Umbraco CMS, HTML, CSS, SCSS, JavaScript, SEO.</li>
+                </ul>
+              </div>
             </div>
-        </section>
 
-        <!-- Contact Section -->
-        <section id="contact" class="contact section-padding">
-            <div class="container">
-                <div class="contact-wrapper reveal">
-                    <div class="contact-info">
-                        <h2>Empecemos a <span class="accent">Crear</span></h2>
-                        <p>Especializado en resolver problemas complejos de arquitectura frontend y escalar equipos de
-                            alto rendimiento. Escríbeme para explorar cómo puedo aportar valor técnico y estratégico a
-                            tu organización.</p>
+            <!-- CMD -->
+            <div class="timeline-item reveal">
+              <div class="timeline-dot"></div>
+              <div class="timeline-date">Dic 2009 - Ene 2012</div>
+              <div class="timeline-content">
+                <h3>Senior Frontend Developer</h3>
+                <h4>CMD - Grupo Clarín</h4>
+                <p>
+                  Desarrollé e integré interfaces para sitios de masivo tráfico
+                  como <strong>TN</strong> y <strong>El Trece TV</strong>.
+                </p>
+                <ul>
+                  <li>
+                    Lideré la optimización de CMS (Drupal, WordPress) mejorando
+                    flujos de trabajo.
+                  </li>
+                  <li>
+                    Optimización de SEO y performance para millones de usuarios.
+                  </li>
+                  <li>Stack: Drupal, WordPress, HTML, CSS, JS.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-                        <div class="contact-card">
-                            <i class="fa-solid fa-envelope"></i>
-                            <a href="mailto:info@jorgerodriguez.es">info@jorgerodriguez.es</a>
-                        </div>
-                        <!--                         <div class="contact-card">
+      <!-- Skills Section -->
+      <section id="skills" class="skills section-padding">
+        <div class="container">
+          <div class="section-header">
+            <h2>Áreas de <span class="accent">Trabajo</span></h2>
+          </div>
+          <div class="carousel-container">
+            <button class="carousel-btn prev" aria-label="Anterior">
+              <i class="fa-solid fa-chevron-left"></i>
+            </button>
+
+            <div class="carousel-slider">
+              <div class="skill-category carousel-item reveal">
+                <h3>
+                  <i class="fa-solid fa-chart-line"></i> Estrategia Digital
+                </h3>
+                <ul class="skill-list">
+                  <li>Consultoría y diagnóstico digital</li>
+                  <li>SEO local y Google Business</li>
+                  <li>Captación directa de reservas</li>
+                  <li>Email marketing y recuperación de leads</li>
+                  <li>Analítica y mejora de conversión</li>
+                </ul>
+              </div>
+              <div class="skill-category carousel-item reveal">
+                <h3><i class="fa-solid fa-layer-group"></i> Web & UX/UI</h3>
+                <ul class="skill-list">
+                  <li>Figma / Adobe XD</li>
+                  <li>Design Systems</li>
+                  <li>Accesibilidad (WCAG)</li>
+                  <li>Responsive Design</li>
+                  <li>Landing pages orientadas a conversión</li>
+                </ul>
+              </div>
+              <div class="skill-category carousel-item reveal">
+                <h3><i class="fa-solid fa-code"></i> Desarrollo Web</h3>
+                <ul class="skill-list">
+                  <li>Angular / TypeScript</li>
+                  <li>WordPress / Drupal / CMS</li>
+                  <li>Performance y SEO técnico</li>
+                  <li>Integración de APIs y formularios</li>
+                </ul>
+              </div>
+              <div class="skill-category carousel-item reveal">
+                <h3><i class="fa-solid fa-chalkboard-user"></i> Formación</h3>
+                <ul class="skill-list">
+                  <li>Capacitación en herramientas digitales</li>
+                  <li>Uso práctico de IA en atención y marketing</li>
+                  <li>Buenas prácticas de contenidos y SEO</li>
+                  <li>Acompañamiento a equipos internos</li>
+                </ul>
+              </div>
+              <div class="skill-category carousel-item reveal">
+                <h3><i class="fa-solid fa-microchip"></i> Automatización IA</h3>
+                <ul class="skill-list">
+                  <li>Asistentes para atención 24/7</li>
+                  <li>Automatización de procesos con n8n</li>
+                  <li>Captación y recuperación de leads</li>
+                  <li>Integración de APIs y workflows inteligentes</li>
+                </ul>
+              </div>
+            </div>
+
+            <button class="carousel-btn next" aria-label="Siguiente">
+              <i class="fa-solid fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Education Section -->
+      <section
+        id="education"
+        class="education section-padding"
+        style="background-color: var(--bg-card)"
+      >
+        <div class="container">
+          <div class="section-header">
+            <h2>Formación <span class="accent">Académica</span></h2>
+          </div>
+          <div class="education-grid">
+            <div class="edu-card reveal">
+              <div class="edu-year">2017</div>
+              <h4>Diplomado en UX</h4>
+              <p>EducaciónIT</p>
+            </div>
+            <div class="edu-card reveal">
+              <div class="edu-year">2014</div>
+              <h4>Analítica Web</h4>
+              <p>EOI (Escuela Organización Ind.)</p>
+            </div>
+            <div class="edu-card reveal">
+              <div class="edu-year">2010</div>
+              <h4>Desarrollador Web</h4>
+              <p>ITMaster Academy</p>
+            </div>
+            <div class="edu-card reveal">
+              <div class="edu-year">2002-2004</div>
+              <h4>Diseñador Multimedia</h4>
+              <p>Inst. Sup. Mariano Moreno</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials Section -->
+      <section id="testimonials" class="testimonials section-padding">
+        <div class="container">
+          <div class="section-header">
+            <h2>Lo que dicen <span class="accent">de mí</span></h2>
+            <p class="testimonials-verify">
+              Estos son testimonios reales de LinkedIn. Puedes corroborarlos
+              <a
+                href="https://www.linkedin.com/in/angular-frontend/details/recommendations/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >aquí <i class="fa-solid fa-arrow-up-right-from-square"></i
+              ></a>
+            </p>
+          </div>
+
+          <div class="carousel-container">
+            <button class="carousel-btn prev" aria-label="Anterior">
+              <i class="fa-solid fa-chevron-left"></i>
+            </button>
+
+            <div class="carousel-slider">
+              <!-- Rec 1: Jorge Guijarro -->
+              <div class="testimonial-card carousel-item">
+                <div class="quote-icon">
+                  <i class="fa-solid fa-quote-left"></i>
+                </div>
+                <p class="testimonial-text">
+                  "He tenido el placer de trabajar con Jorge en varios
+                  proyectos... Su conocimiento profundo ha sido fundamental para
+                  el éxito de nuestros proyectos... Sin duda, Jorge es un
+                  desarrollador de primer nivel."
+                </p>
+                <div class="testimonial-author">
+                  <h4>Jorge Guijarro</h4>
+                  <span>Senior Product Designer | UX/UI Expert</span>
+                </div>
+              </div>
+
+              <!-- Rec 2: David Moñino -->
+              <div class="testimonial-card carousel-item">
+                <div class="quote-icon">
+                  <i class="fa-solid fa-quote-left"></i>
+                </div>
+                <p class="testimonial-text">
+                  "Jorge es una persona muy resolutiva que entiende
+                  perfectamente los requerimientos y es capaz de hacerse a la
+                  idea... Es un placer trabajar con gente tan profesional como
+                  él."
+                </p>
+                <div class="testimonial-author">
+                  <h4>David Moñino Bermejo</h4>
+                  <span>Technical Manager at NTT DATA</span>
+                </div>
+              </div>
+
+              <!-- Rec 3: Milena Hormaizteguy -->
+              <div class="testimonial-card carousel-item">
+                <div class="quote-icon">
+                  <i class="fa-solid fa-quote-left"></i>
+                </div>
+                <p class="testimonial-text">
+                  "Es un honor para mí haber compartido con Jorge... siempre
+                  dispuesto a trabajar en equipo. La rapidez en la resolución de
+                  los problemas demuestra claramente la calidez profesional."
+                </p>
+                <div class="testimonial-author">
+                  <h4>Milena Hormaizteguy</h4>
+                  <span>QA Manager / Lead QA</span>
+                </div>
+              </div>
+
+              <!-- Rec 4: Pedro Javier Acosta -->
+              <div class="testimonial-card carousel-item">
+                <div class="quote-icon">
+                  <i class="fa-solid fa-quote-left"></i>
+                </div>
+                <p class="testimonial-text">
+                  "Excelente profesional, proactivo, comprometido y muy
+                  creativo. Un muy buen compañero de trabajo y un integrante
+                  fundamental en el equipo."
+                </p>
+                <div class="testimonial-author">
+                  <h4>Pedro Javier Acosta</h4>
+                  <span>Technical Lead at CMD Clarin Global</span>
+                </div>
+              </div>
+
+              <!-- Rec 5: Lucas Robledo -->
+              <div class="testimonial-card carousel-item">
+                <div class="quote-icon">
+                  <i class="fa-solid fa-quote-left"></i>
+                </div>
+                <p class="testimonial-text">
+                  "Sus amplios conocimientos en lo que hace lo hacen un
+                  integrante fundamental en cualquier grupo de trabajo. Su
+                  rapidez para llevar a cabo tareas... da gusto trabajar con
+                  él."
+                </p>
+                <div class="testimonial-author">
+                  <h4>Lucas Robledo</h4>
+                  <span>Application Developer at IBM</span>
+                </div>
+              </div>
+
+              <!-- Rec 6: German Hirtz -->
+              <div class="testimonial-card carousel-item">
+                <div class="quote-icon">
+                  <i class="fa-solid fa-quote-left"></i>
+                </div>
+                <p class="testimonial-text">
+                  "Jorge tiene un alto compromiso en lo que hace y es muy
+                  proactivo en sus tareas. Es inquieto y le interesa la
+                  investigación de nuevas formas de solucionar problemas."
+                </p>
+                <div class="testimonial-author">
+                  <h4>German Hirtz</h4>
+                  <span>Programador Full Stack</span>
+                </div>
+              </div>
+
+              <!-- Rec 7: Lisandro Fernandez -->
+              <div class="testimonial-card carousel-item">
+                <div class="quote-icon">
+                  <i class="fa-solid fa-quote-left"></i>
+                </div>
+                <p class="testimonial-text">
+                  "Profesional comprometido y responsable. Además de su
+                  experiencia en esta profesión, tiene siempre una actitud
+                  positiva. Ha sido una experiencia muy enriquecedora."
+                </p>
+                <div class="testimonial-author">
+                  <h4>Lisandro Fernandez</h4>
+                  <span>Senior Software Engineer</span>
+                </div>
+              </div>
+
+              <!-- Rec 8: Mauricio Cifuentes -->
+              <div class="testimonial-card carousel-item">
+                <div class="quote-icon">
+                  <i class="fa-solid fa-quote-left"></i>
+                </div>
+                <p class="testimonial-text">
+                  "Persona comprometida con su trabajo, siempre atento con sus
+                  compañeros. De gran valor para cualquier empresa, pero sobre
+                  todo una gran persona."
+                </p>
+                <div class="testimonial-author">
+                  <h4>Mauricio Cifuentes</h4>
+                  <span>Full Stack Developer</span>
+                </div>
+              </div>
+            </div>
+
+            <button class="carousel-btn next" aria-label="Siguiente">
+              <i class="fa-solid fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="contact section-padding">
+        <div class="container">
+          <div class="contact-wrapper reveal">
+            <div class="contact-info">
+              <h2>Empecemos a <span class="accent">Crear</span></h2>
+              <p>
+                Si tienes una empresa turística o local y quieres mejorar tu
+                captación directa, tu web, tu SEO local o la atención de
+                consultas repetitivas, puedo ayudarte con un diagnóstico claro y
+                soluciones prácticas de marketing, automatización e IA.
+              </p>
+
+              <div class="contact-card">
+                <i class="fa-solid fa-envelope"></i>
+                <a href="mailto:info@jorgerodriguez.es"
+                  >info@jorgerodriguez.es</a
+                >
+              </div>
+              <!--                         <div class="contact-card">
                             <i class="fa-solid fa-phone"></i>
                             <a href="tel:+34664777186">+34 664 77 71 86</a>
                         </div> -->
-                        <div class="contact-card">
-                            <i class="fa-brands fa-linkedin"></i>
-                            <a href="https://linkedin.com/in/angular-frontend/"
-                                target="_blank">linkedin.com/in/angular-frontend</a>
-                        </div>
-                        <div class="contact-card">
-                            <i class="fa-solid fa-location-dot"></i>
-                            <span>Vigo, Pontevedra, España</span>
-                        </div>
-                    </div>
-
-                    <form id="contact-form" class="contact-form" action="enviar-contacto.php" method="POST">
-                        <div class="form-group">
-                            <label for="name">Nombre Completo</label>
-                            <input type="text" id="name" name="name" required placeholder="Ej. Juan Pérez">
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Correo Electrónico</label>
-                            <input type="email" id="email" name="email" required placeholder="juan@empresa.com">
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Detalles del Proyecto</label>
-                            <textarea id="message" name="message" rows="5" required
-                                placeholder="¿Qué buscas construir o mejorar?"></textarea>
-                        </div>
-                        <button type="submit" id="submit-btn" class="btn btn-primary full-width">Enviar
-                            Solicitud</button>
-                        <div id="form-message" class="form-message hidden"></div>
-                    </form>
-                </div>
+              <div class="contact-card">
+                <i class="fa-brands fa-linkedin"></i>
+                <a
+                  href="https://linkedin.com/in/angular-frontend/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >linkedin.com/in/angular-frontend</a
+                >
+              </div>
+              <div class="contact-card">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>Vigo, Pontevedra, España</span>
+              </div>
             </div>
-        </section>
+
+            <form
+              id="contact-form"
+              class="contact-form"
+              action="enviar-contacto.php"
+              method="POST"
+            >
+              <div class="form-group form-honeypot">
+                <label class="sr-only" for="company">Empresa</label>
+                <input
+                  type="text"
+                  id="company"
+                  name="company"
+                  autocomplete="off"
+                  tabindex="-1"
+                  aria-hidden="true"
+                />
+              </div>
+              <div class="form-group">
+                <label for="name">Nombre Completo</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  placeholder="Ej. Juan Pérez"
+                />
+              </div>
+              <div class="form-group">
+                <label for="email">Correo Electrónico</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  placeholder="juan@empresa.com"
+                />
+              </div>
+              <div class="form-group">
+                <label for="message">Detalles del Proyecto</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  required
+                  placeholder="Cuéntame tu negocio, tus canales actuales y qué quieres mejorar: reservas, consultas, SEO, campañas o automatización."
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                id="submit-btn"
+                class="btn btn-primary full-width"
+              >
+                Enviar Solicitud
+              </button>
+              <div id="form-message" class="form-message hidden"></div>
+            </form>
+          </div>
+        </div>
+      </section>
     </main>
 
     <!-- Back to Top Button -->
     <button id="back-to-top" class="back-to-top" aria-label="Volver arriba">
-        <i class="fa-solid fa-arrow-up"></i>
+      <i class="fa-solid fa-arrow-up"></i>
     </button>
 
     <footer>
-        <div class="container footer-content">
-            <div class="footer-links">
-                <a href="https://linkedin.com/in/angular-frontend/" target="_blank" aria-label="LinkedIn"><i
-                        class="fa-brands fa-linkedin"></i></a>
-                <a href="mailto:info@jorgerodriguez.es" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
-            </div>
-            <p>&copy; <span id="year"></span> Jorge Rafael Rodriguez. Senior Frontend Developer. Todos los derechos
-                reservados.</p>
+      <div class="container footer-content">
+        <div class="footer-links">
+          <a
+            href="https://linkedin.com/in/angular-frontend/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+          <a href="mailto:info@jorgerodriguez.es" aria-label="Email"
+            ><i class="fa-solid fa-envelope"></i
+          ></a>
         </div>
+        <p>
+          &copy; <span id="year"></span> Jorge Rafael Rodriguez. Marketing
+          Turístico, UX/UI & Automatización IA. Todos los derechos reservados.
+        </p>
+      </div>
     </footer>
 
-    <div id="cookie-banner" class="cookie-banner" role="dialog" aria-live="polite" aria-label="Aviso de cookies"
-        aria-hidden="true" hidden>
-        <div class="cookie-content">
-            <div class="cookie-text">
-                <h2>Control de cookies</h2>
-                <p>
-                    Este sitio web utiliza cookies propias y de terceros, concretamente de Google Analytics, para
-                    analizar la navegación interna, medir el volumen de visitas y mejorar la experiencia del usuario.
-                    Puedes aceptar o rechazar las cookies no esenciales.
-                </p>
-            </div>
-            <div class="cookie-actions">
-                <button class="btn btn-secondary" type="button" data-cookie-action="decline">Rechazar</button>
-                <button class="btn btn-primary" type="button" data-cookie-action="accept">Aceptar</button>
-            </div>
+    <div
+      id="cookie-banner"
+      class="cookie-banner"
+      role="dialog"
+      aria-live="polite"
+      aria-label="Aviso de cookies"
+      aria-hidden="true"
+      hidden
+    >
+      <div class="cookie-content">
+        <div class="cookie-text">
+          <h2>Control de cookies</h2>
+          <p>
+            Este sitio guarda preferencias locales, como el tema visual y tu
+            elección sobre este aviso. Si más adelante activo analítica, se
+            cargará solo con tu consentimiento.
+          </p>
         </div>
-        <details class="cookie-details">
-            <summary>Ver detalles</summary>
-            <ul>
-                <li><strong>Necesarias:</strong> permiten el funcionamiento básico del sitio.</li>
-                <li><strong>Preferencias:</strong> guardan tu elección de tema y consentimiento.</li>
-                <li><strong>Terceros:</strong> recursos externos (fuentes e iconos) pueden aplicar sus políticas.</li>
-            </ul>
-        </details>
+        <div class="cookie-actions">
+          <button
+            class="btn btn-secondary"
+            type="button"
+            data-cookie-action="decline"
+          >
+            Rechazar
+          </button>
+          <button
+            class="btn btn-primary"
+            type="button"
+            data-cookie-action="accept"
+          >
+            Aceptar
+          </button>
+        </div>
+      </div>
+      <details class="cookie-details">
+        <summary>Ver detalles</summary>
+        <ul>
+          <li>
+            <strong>Necesarias:</strong> permiten el funcionamiento básico del
+            sitio.
+          </li>
+          <li>
+            <strong>Preferencias:</strong> guardan tu elección de tema y
+            consentimiento.
+          </li>
+          <li>
+            <strong>Terceros:</strong> recursos externos (fuentes e iconos)
+            pueden aplicar sus políticas.
+          </li>
+        </ul>
+      </details>
     </div>
 
-    <script src="script.js" defer></script>
-</body>
-
+    <script src="script.js?v=20260428" defer></script>
+  </body>
 </html>

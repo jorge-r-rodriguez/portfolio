@@ -5,17 +5,22 @@ $recipient_email = 'info@jorgerodriguez.es';
 
 // Headers
 header('Content-Type: application/json');
+header('X-Content-Type-Options: nosniff');
+header('Referrer-Policy: strict-origin-when-cross-origin');
 
 // Validar origen de la solicitud (CORS)
 $origin = isset($_SERVER['HTTP_ORIGIN']) ? $_SERVER['HTTP_ORIGIN'] : '';
-if ($origin && $origin !== $allowed_origin && strpos($origin, 'localhost') === false) {
+$allowed_host = parse_url($allowed_origin, PHP_URL_HOST);
+$origin_host = $origin ? parse_url($origin, PHP_URL_HOST) : '';
+
+if ($origin && $origin_host !== $allowed_host) {
     http_response_code(403);
     echo json_encode(['success' => false, 'message' => 'Origen no autorizado']);
     exit();
 }
 
 // Permitir CORS si viene del origen correcto
-if ($origin === $allowed_origin || strpos($origin, 'localhost') !== false) {
+if ($origin_host === $allowed_host) {
     header('Access-Control-Allow-Origin: ' . $origin);
     header('Access-Control-Allow-Methods: POST, OPTIONS');
     header('Access-Control-Allow-Headers: Content-Type');
@@ -35,11 +40,14 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 }
 
 // Rate limiting básico: máximo 10 solicitudes por IP por hora
-$ip = $_SERVER['REMOTE_ADDR'];
+$ip = $_SERVER['REMOTE_ADDR'] ?? 'unknown';
 $rate_limit_file = sys_get_temp_dir() . '/contact_form_' . md5($ip) . '.txt';
 
 if (file_exists($rate_limit_file)) {
     $data = json_decode(file_get_contents($rate_limit_file), true);
+    if (!is_array($data) || !isset($data['count'], $data['first_request'])) {
+        $data = ['count' => 0, 'first_request' => time()];
+    }
     $current_time = time();
     
     // Si han pasado más de una hora, resetear el contador
@@ -54,18 +62,26 @@ if (file_exists($rate_limit_file)) {
             exit();
         }
     }
-    file_put_contents($rate_limit_file, json_encode($data));
+    file_put_contents($rate_limit_file, json_encode($data), LOCK_EX);
 } else {
-    file_put_contents($rate_limit_file, json_encode(['count' => 1, 'first_request' => time()]));
+    file_put_contents($rate_limit_file, json_encode(['count' => 1, 'first_request' => time()]), LOCK_EX);
 }
 
 // Obtener datos del formulario
 $name = isset($_POST['name']) ? trim($_POST['name']) : '';
 $email = isset($_POST['email']) ? trim($_POST['email']) : '';
 $message = isset($_POST['message']) ? trim($_POST['message']) : '';
+$company = isset($_POST['company']) ? trim($_POST['company']) : '';
 
 // Validación de campos
 $errors = [];
+
+// Honeypot antispam: los usuarios reales no ven este campo.
+if ($company !== '') {
+    http_response_code(400);
+    echo json_encode(['success' => false, 'message' => 'Solicitud no válida']);
+    exit();
+}
 
 // Validar longitud de campos
 if (empty($name) || strlen($name) < 2 || strlen($name) > 100) {
@@ -136,7 +152,7 @@ $body = "<!DOCTYPE html>
     <div class='container'>
         <div class='email-content'>
             <div class='header'>
-                <h2>📧 Fromulario web de Jorge Rodriguez</h2>
+                <h2>Formulario web de Jorge Rodriguez</h2>
             </div>
             
             <div class='field'>

@@ -68,11 +68,18 @@ body.light-mode .btn-secondary:hover {
 }
 
 body.light-mode .about-card,
+body.light-mode .ai-card,
+body.light-mode .client-card,
 body.light-mode .timeline-item, 
 body.light-mode .skill-category,
 body.light-mode .edu-card {
     border-color: rgba(0,0,0,0.1);
     box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+body.light-mode .ai-intro {
+    background: linear-gradient(135deg, rgba(2, 132, 199, 0.08), rgba(129, 140, 248, 0.08));
+    border-color: rgba(2, 132, 199, 0.18);
 }
 
 body.light-mode .contact-form {
@@ -128,6 +135,7 @@ body.light-mode .btn-featured:hover {
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: calc(var(--nav-height) + 16px);
 }
 
 body {
@@ -176,16 +184,8 @@ img {
     padding: 100px 0;
 }
 
-.about,
-.experience,
-.skills,
-.education,
-.testimonials,
-.contact,
-.portfolio-category,
-footer {
-    content-visibility: auto;
-    contain-intrinsic-size: 1px 700px;
+section[id] {
+    scroll-margin-top: calc(var(--nav-height) + 16px);
 }
 
 .accent {
@@ -235,7 +235,7 @@ footer {
 /* Navigation & Toggle */
 .nav-list {
     display: flex;
-    gap: 32px;
+    gap: 20px;
     align-items: center;
 }
 
@@ -263,7 +263,7 @@ body.light-mode .theme-toggle:hover {
 }
 
 .nav-link {
-    font-size: 0.95rem;
+    font-size: 0.92rem;
     font-weight: 500;
     color: var(--text-secondary);
 }
@@ -313,7 +313,7 @@ body.light-mode .theme-toggle:hover {
 .hero-content {
     position: relative;
     z-index: 2;
-    max-width: 800px;
+    max-width: 100%;
 }
 
 .hero .subtitle {
@@ -333,7 +333,7 @@ body.light-mode .theme-toggle:hover {
 .hero .description {
     font-size: 1.25rem;
     color: var(--text-secondary);
-    max-width: 600px;
+    max-width: 780px;
     margin-bottom: 2.5rem;
 }
 
@@ -417,6 +417,7 @@ body.light-mode .theme-toggle:hover {
     margin-bottom: 60px;
 }
 
+.section-header h1,
 .section-header h2 {
     font-size: 2.5rem;
     position: relative;
@@ -425,7 +426,7 @@ body.light-mode .theme-toggle:hover {
 
 /* About Section */
 .about-content {
-    max-width: 900px;
+    max-width: 100%;
     margin: 0 auto;
 }
 
@@ -497,6 +498,117 @@ body.light-mode .profile-thumbnail:hover {
         padding: 32px 24px;
         text-align: left;
     }
+}
+
+/* AI Solutions */
+.ai-solutions {
+    background: rgba(255, 255, 255, 0.015);
+}
+
+.ai-intro {
+    max-width: 100%;
+    margin: 0 auto 36px;
+    padding: 32px;
+    border: 1px solid rgba(56, 189, 248, 0.18);
+    border-radius: var(--border-radius);
+    background: linear-gradient(135deg, rgba(56, 189, 248, 0.08), rgba(129, 140, 248, 0.08));
+}
+
+.ai-intro h3 {
+    font-size: 1.55rem;
+    margin-bottom: 14px;
+}
+
+.ai-intro p {
+    color: var(--text-secondary);
+}
+
+.ai-solutions-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.ai-card {
+    background: var(--bg-card);
+    padding: 28px;
+    border-radius: var(--border-radius);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.ai-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent);
+}
+
+.ai-card i {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 18px;
+    border-radius: 50%;
+    background: rgba(56, 189, 248, 0.1);
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+}
+
+.ai-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+}
+
+.ai-card p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+/* Tourism Clients */
+.tourism-clients {
+    background: rgba(255, 255, 255, 0.01);
+}
+
+.client-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.client-card {
+    min-height: 108px;
+    background: var(--bg-card);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: var(--border-radius);
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.client-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent);
+}
+
+.client-card i {
+    width: 44px;
+    height: 44px;
+    flex: 0 0 44px;
+    border-radius: 50%;
+    background: rgba(56, 189, 248, 0.1);
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.client-card span {
+    color: var(--text-primary);
+    font-weight: 600;
+    line-height: 1.35;
 }
 
 /* Experience Timeline */
@@ -687,6 +799,13 @@ body.light-mode .profile-thumbnail:hover {
     margin-bottom: 24px;
 }
 
+.form-honeypot {
+    position: absolute;
+    left: -9999px;
+    height: 0;
+    overflow: hidden;
+}
+
 .form-group label {
     display: block;
     margin-bottom: 8px;
@@ -779,6 +898,8 @@ footer {
 @media (max-width: 900px) {
     .hero h1 { font-size: 3.5rem; }
     .contact-wrapper { grid-template-columns: 1fr; }
+    .ai-solutions-grid { grid-template-columns: 1fr; }
+    .client-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 @media (max-width: 768px) {
@@ -842,6 +963,15 @@ footer {
         width: 160px;
         height: 160px;
         box-shadow: 0 6px 18px rgba(0, 0, 0, 0.22);
+    }
+
+    .ai-intro,
+    .ai-card {
+        padding: 24px;
+    }
+
+    .client-grid {
+        grid-template-columns: 1fr;
     }
     
     .timeline { left: 0; padding-left: 35px; }
