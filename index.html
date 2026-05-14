@@ -89,7 +89,7 @@
       media="print"
       onload="this.media = 'all'"
     />
-    <link rel="stylesheet" href="style.css?v=20260428" />
+    <link rel="stylesheet" href="style.css?v=20260514" />
     <link
       rel="preload"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -810,7 +810,11 @@
               action="enviar-contacto.php"
               method="POST"
             >
-              <div class="form-group form-honeypot">
+              <div
+                class="form-group form-honeypot"
+                style="position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden;"
+                aria-hidden="true"
+              >
                 <label class="sr-only" for="company">Empresa</label>
                 <input
                   type="text"
@@ -818,7 +822,6 @@
                   name="company"
                   autocomplete="off"
                   tabindex="-1"
-                  aria-hidden="true"
                 />
               </div>
               <div class="form-group">

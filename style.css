@@ -801,7 +801,8 @@ body.light-mode .profile-thumbnail:hover {
 
 .form-honeypot {
     position: absolute;
-    left: -9999px;
+    left: -10000px;
+    width: 1px;
     height: 0;
     overflow: hidden;
 }
