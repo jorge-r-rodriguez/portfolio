@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const nav = document.querySelector('.nav');
     const mobileToggle = document.querySelector('.mobile-toggle');
     const themeToggleBtn = document.getElementById('theme-toggle');
-    const themeIcon = themeToggleBtn ? themeToggleBtn.querySelector('i') : null;
+    const themeIcon = themeToggleBtn ? themeToggleBtn.querySelector('.icon') : null;
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const isMobileViewport = window.matchMedia('(max-width: 768px)').matches;
 
@@ -90,11 +90,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     const getHeaderOffset = () => {
-        if (!header) {
-            return 0;
-        }
-
-        return Math.ceil(header.getBoundingClientRect().height) + 16;
+        const navHeight = window.getComputedStyle(document.documentElement).getPropertyValue('--nav-height');
+        return (parseInt(navHeight, 10) || 80) + 16;
     };
 
     document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
@@ -127,40 +124,28 @@ document.addEventListener('DOMContentLoaded', () => {
             .map((link) => document.querySelector(link.getAttribute('href')))
             .filter(Boolean);
 
-        const setActiveNavLink = () => {
-            const offset = getHeaderOffset() + 8;
-            let currentSection = sections[0];
-
-            sections.forEach((section) => {
-                if (section.getBoundingClientRect().top <= offset) {
-                    currentSection = section;
-                }
-            });
-
+        const setActiveNavLink = (sectionId) => {
             navLinks.forEach((link) => {
-                link.classList.toggle(
-                    'active',
-                    currentSection && link.getAttribute('href') === `#${currentSection.id}`
-                );
+                link.classList.toggle('active', link.getAttribute('href') === `#${sectionId}`);
             });
         };
 
-        let navTicking = false;
+        if ('IntersectionObserver' in window) {
+            const navObserver = new IntersectionObserver((entries) => {
+                const visibleEntry = entries
+                    .filter((entry) => entry.isIntersecting)
+                    .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
 
-        window.addEventListener('scroll', () => {
-            if (navTicking) {
-                return;
-            }
-
-            navTicking = true;
-            window.requestAnimationFrame(() => {
-                setActiveNavLink();
-                navTicking = false;
+                if (visibleEntry) {
+                    setActiveNavLink(visibleEntry.target.id);
+                }
+            }, {
+                rootMargin: '-35% 0px -55% 0px',
+                threshold: [0, 0.25, 0.5, 0.75]
             });
-        }, { passive: true });
 
-        window.addEventListener('resize', setActiveNavLink);
-        setActiveNavLink();
+            sections.forEach((section) => navObserver.observe(section));
+        }
     }
 
     const contactForm = document.getElementById('contact-form');
@@ -229,9 +214,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (backToTopBtn) {
         let ticking = false;
+        let isBackToTopVisible = false;
 
         const updateBackToTopState = () => {
-            backToTopBtn.classList.toggle('visible', window.scrollY > 300);
+            const shouldShow = window.scrollY > 300;
+
+            if (shouldShow !== isBackToTopVisible) {
+                backToTopBtn.classList.toggle('visible', shouldShow);
+                isBackToTopVisible = shouldShow;
+            }
+
             ticking = false;
         };
 
@@ -243,8 +235,6 @@ document.addEventListener('DOMContentLoaded', () => {
             ticking = true;
             window.requestAnimationFrame(updateBackToTopState);
         }, { passive: true });
-
-        updateBackToTopState();
 
         backToTopBtn.addEventListener('click', () => {
             window.scrollTo({
